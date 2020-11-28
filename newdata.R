@@ -30,23 +30,8 @@ data<-cbind(cancer,split[1],split[2])
 head(data)
 names(data)
 
-#remove the Geography from the data
-data<-data[,-c(8)]
-names(data)
 
-#want to group by state
-#delete the county
-statedata<-data[,-c(14)]
-#to check
-names(statedata)
 
-#average per state <-- based on what we wanna tell ( Average/total)
-statedata<- statedata %>% group_by(States) %>% summarize(AvgAnnCount=mean(avgAnnCount),
-                                                        AvgDeathsPerYear=mean(avgDeathsPerYear),AvgincidenceRate=mean(incidenceRate), AvgmedIncome=mean(medIncome),AvgpopEst2015=mean(popEst2015),
-                                                        AvgpovertyPercent=mean(povertyPercent),AvgMedianAge=mean(MedianAge),AvgPctPrivateCoverageAlone=mean(PctPrivateCoverageAlone),PctPublicCoverageAlone=mean(PctPublicCoverageAlone),
-                                                        AvgPctWhite=mean(PctWhite),AvgPctBlack=mean(PctBlack),AvgPctAsian=mean(PctAsian),AvgPctOtherRace=mean(PctOtherRace))
-view(statedata)
-str(statedata)
 
 
 
