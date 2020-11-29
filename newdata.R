@@ -30,6 +30,38 @@ data<-cbind(cancer,split[1],split[2])
 head(data)
 names(data)
 
+#exclude avgDeathsPerYear, target death rate and geography from cancer data
+cancer_new <- cancer[,-c(2,3,9)]
+names(cancer_new)
+
+#Pair plots of cancer data and splitting data into half 
+colnames(cancer_new)
+cancer_new1 <- cancer_new[,c(1:5)] 
+cancer_new2 <- cancer_new[,c(3,6:10)]
+pairs(cancer_new1)
+pairs(cancer_new2)
+
+#incidence model using stepwise regression
+incd.lm <- lm(incidenceRate ~ ., data = cancer_new)
+step(incd.lm, direction = 'both')
+
+incd_new <- lm( incidenceRate ~ avgAnnCount + medIncome + popEst2015 + 
+                 MedianAge + PctPrivateCoverageAlone + PctPublicCoverageAlone + 
+                 PctWhite + PctBlack + PctOtherRace, data = cancer_new)
+plot(incd_new) 
+#possible outliers are points 1490, 282, 256
+#in residuals vs fitted plot, the line(variance) is slightly slanting downwards
+#Normal Q-Q plot, line is not best fit
+#Scale location plot, line is also slanting downwards
+
+#checking for large vif
+vif(incd_new) #all vifs < 10 so not large
+
+#Finding leverage points
+X <- cbind(rep(1,nrow(cancer)), avgAnnCount, medIncome, popEst2015, 
+             MedianAge, PctPrivateCoverageAlone, PctPublicCoverageAlone, 
+             PctWhite, PctBlack, PctOtherRace, data = cancer_new)
+H <- X %*% solve(t(X) %*% X) %*% t(X) #idk why this gives an error
 
 
 
