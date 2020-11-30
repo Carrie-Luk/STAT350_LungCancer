@@ -15,6 +15,7 @@ names(cancer)
 cancer<-cancer[complete.cases(cancer),]
 rownames(cancer)=seq(1:nrow(cancer))
 view(cancer)
+cancer<-rename(cancer,"DeathRate"="TARGET_deathRate")
 
 #see summary -----------
 summary(cancer)
