@@ -51,7 +51,14 @@ bestmodel<-lm(DeathRate ~ avgAnnCount + avgDeathsPerYear + incidenceRate +
                    PctAsian + PctOtherRace, data = cancer2)
 plot(bestmodel)
 summary(bestmodel)
+#VIF------
+vif(bestmodel)
 
+
+X <- cbind(rep(1,nrow(cancer2)), cancer2$avgDeathsPerYear,cancer2$incidenceRate,
+           cancer2$medIncome , cancer2$povertyPercent , cancer2$PctPublicCoverageAlone , cancer2$PctWhite ,
+           cancer2$PctAsian ,cancer2$PctOtherRace,data=cancer2)
+H <- X %*% solve(t(X) %*% X) %*% t(X)
 
 #outliers----------
 qqPlot(bestmodel,labels=row.names(bestmodel), id.method="identify",
