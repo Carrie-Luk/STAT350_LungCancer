@@ -4,12 +4,23 @@ library(dplyr)
 
 #read data
 cancer<-read.csv("cancer_reg.csv", stringsAsFactors = FALSE)
+#new data frame
+names(cancer)
+datapoint <- data.frame(avgAnnCount = 3600, avgDeathsPerYear = 1020, TARGET_deathRate = 164.1, incidenceRate = 463.3, medIncome = 90695,
+                        popEst2015 = 717189, povertyPercent = 18.6, MedianAge = 33.9, 
+                        Geography = "Washington, District of Columbia", PctPrivateCoverageAlone = 68,
+                        PctPublicCoverageAlone = 34.1, PctWhite = 41.96, PctBlack = 44.53, PctAsian = 4.35,
+                        PctOtherRace = 9.16)
+cancer <- rbind(cancer,datapoint)
+head(cancer)
+tail(cancer)
 
 #remove variable that we don't need-----------
 names(cancer)
 cancer<-cancer[,-c(8,9,11:12,14:24,26:27,33:34)]
 view(cancer)
 names(cancer)
+
 
 #delete missing values/NA--------------
 cancer<-cancer[complete.cases(cancer),]
