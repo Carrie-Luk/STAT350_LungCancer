@@ -32,7 +32,6 @@ pairs(DeathRate~avgAnnCount+avgDeathsPerYear+incidenceRate,data=cancer)
 #FIT ALL LINEAR MODEL------------
 names(cancer)
 cancer2<-cancer[,-c(9)]
-cancer2<-rename(cancer2,"DeathRate"="TARGET_deathRate")
 head(cancer2)
 deathfitall <- lm(DeathRate ~ ., data = cancer2)
 summary(deathfitall)
@@ -58,7 +57,7 @@ vif(bestmodel)
 
 X <- cbind(rep(1,nrow(cancer2)), cancer2$avgDeathsPerYear,cancer2$incidenceRate,
            cancer2$medIncome , cancer2$povertyPercent , cancer2$PctPublicCoverageAlone , cancer2$PctWhite ,
-           cancer2$PctAsian ,cancer2$PctOtherRace,data=cancer2)
+           cancer2$PctAsian ,cancer2$PctOtherRace)
 H <- X %*% solve(t(X) %*% X) %*% t(X)
 
 #outliers----------
