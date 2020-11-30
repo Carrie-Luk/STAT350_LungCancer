@@ -46,16 +46,20 @@ summary(step.model)
 
 #best model
 names(cancer2)
-bestmodel<-lm(DeathRate ~ avgAnnCount + avgDeathsPerYear + incidenceRate + 
+attach(cancer2)
+#delete IncdRate
+bestmodel<-lm(DeathRate ~ avgAnnCount + avgDeathsPerYear + 
                    medIncome + povertyPercent + PctPublicCoverageAlone + PctWhite + 
                    PctAsian + PctOtherRace, data = cancer2)
 plot(bestmodel)
 summary(bestmodel)
+
+
 #VIF------
 vif(bestmodel)
 
 
-X <- cbind(rep(1,nrow(cancer2)), cancer2$avgDeathsPerYear,cancer2$incidenceRate,
+X <- cbind(rep(1,nrow(cancer2)), cancer2$avgDeathsPerYear,
            cancer2$medIncome , cancer2$povertyPercent , cancer2$PctPublicCoverageAlone , cancer2$PctWhite ,
            cancer2$PctAsian ,cancer2$PctOtherRace)
 H <- X %*% solve(t(X) %*% X) %*% t(X)
@@ -63,7 +67,7 @@ H <- X %*% solve(t(X) %*% X) %*% t(X)
 #outliers----------
 qqPlot(bestmodel,labels=row.names(bestmodel), id.method="identify",
          simulate=TRUE, main="Q-Q Plot")
-#data 232 and 966 could be potential outlier
+#data 2182 and 966 could be potential outlier
 #using outlierTest to make sure if potential outliers are indeed outliers
 outlierTest(bestmodel)
 
