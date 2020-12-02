@@ -75,6 +75,10 @@ hii <- diag(H)
 studentRes <- studres(incd_new)
 which(hii > 2*ncol(X)/nrow(X) & (studentRes > 3 | studentRes < -3)) #likely to be influential points: 2179,2197
 
+#Check for influential points
+incd.inf <- influence(incd_new)
+sort(incd.inf$hat, decreasing = TRUE)
+
 #Measuring Cook's D
 incd.cook <- cooks.distance(incd_new)
 which(incd.cook > 1) #no cook's d > 1, so no influential points
