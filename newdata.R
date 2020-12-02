@@ -66,7 +66,7 @@ outlierTest(incd_new)
 #checking for large vif
 vif(incd_new) #all vifs < 10 so not large
 
-#Finding leverage points
+#Finding leverage points and potential influential points
 X <- cbind(rep(1,nrow(cancer)), cancer_new$avgAnnCount, cancer_new$medIncome,  cancer_new$popEst2015, 
            cancer_new$MedianAge,  cancer_new$PctPrivateCoverageAlone,  cancer_new$PctPublicCoverageAlone, 
            cancer_new$PctWhite,  cancer_new$PctBlack,  cancer_new$PctOtherRace)
