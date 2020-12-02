@@ -130,22 +130,23 @@ cancer2<-cancer2[,-c(2,5)]
 (exc<-2*ncol(cancer2)/nrow(cancer2))
 #0.00902009
 
+#LEVERAGE --------- tutorial
 #to get influence points ----------
 cancer_inf<-influence(fitmodel)
 which(cancer_inf$hat>exc)
 halfnorm(cancer_inf$hat,labs=names(cancer_inf$hat),ylab='Leverage')
-#798,1841 influence points, the other points are potential
-
-#REMOVE INFLUENTIAL POINTS-----------
+#influential point:
 
 #finding leverage point
 hii <- diag(H)
 studentRes <- studres(fitmodel)
-#to test leverage point
-which(hii > 2)
+which(hii>2)
+#no leverage point
+
+#finding influence point- lecture -----------
 which(hii > exc & (studentRes > 3 | studentRes < -3))
 #influential point: 838,1560,2179
-#no leverage point
+
 
 #cook's distance
 cancer_cook<-cooks.distance(fitmodel)
