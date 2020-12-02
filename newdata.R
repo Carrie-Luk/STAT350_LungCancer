@@ -1,5 +1,4 @@
 
-
 library(tidyverse)
 library(stringr)
 library(dplyr)
@@ -74,4 +73,29 @@ X <- cbind(rep(1,nrow(cancer)), cancer_new$avgAnnCount, cancer_new$medIncome,  c
 H <- X %*% solve(t(X) %*% X) %*% t(X)
 hii <- diag(H)
 studentRes <- studres(incd_new)
-which(hii > 2)
+which(hii > 2*ncol(X)/nrow(X) & (studentRes > 3 | studentRes < -3)) #likely to be influential points: 2179,2197
+
+#Measuring Cook's D
+incd.cook <- cooks.distance(incd_new)
+which(incd.cook > 1) #no cook's d > 1, so no influential points
+
+#Cross validation
+set.seed(123)
+nsamp = ceiling(0.8*length(cancer_new$incidenceRate))
+training_samps <- sample(c(1:length(cancer_new$incidenceRate)), nsamp)
+training_samps <- sort(training_samps)
+train_data <- cancer_new[training_samps, ]
+test_data <- cancer_new[-training_samps, ]
+dim(test_data)
+
+#Fit model using training data
+train.incd <- lm( cancer_new$incidenceRate ~ cancer_new$avgAnnCount + cancer_new$medIncome + cancer_new$popEst2015 + 
+                  cancer_new$MedianAge + cancer_new$PctPrivateCoverageAlone + cancer_new$PctPublicCoverageAlone + 
+                  cancer_new$PctWhite + cancer_new$PctBlack + cancer_new$PctOtherRace, data = train_data)
+
+#Predict responses on test set
+preds <- predict(train.incd, test_data)
+
+#Evaluating quality of prediction
+Rsq <- R2(preds, test_data$incidenceRate)
+RMSPE <- RMSE(preds, test_data$incidenceRate)
