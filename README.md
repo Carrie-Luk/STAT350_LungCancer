@@ -3,3 +3,12 @@ Cancer is among the leading causes of death worldwide, with 18 million new cases
 
 
 **Also include description of all files in the project for reader to understand what is in it
+
+Here is an explanation of the files on our GitHub page:
+
+1. cancer_reg.csv
+   - this is our raw dataset we used to perform our analysis and the basis of our project
+2. 
+3...
+
+
