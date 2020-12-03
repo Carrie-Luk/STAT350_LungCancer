@@ -114,6 +114,9 @@ summary(fitmodel)
 #just to check all of the VIF is less than 10
 vif(fitmodel) 
 
+#delete avgDeathperYear and popest2015 from the data
+names(cancer2)
+cancer2<-cancer2[,-c(2,5)]
 
 #LEVERAGE------------------
 #INFLUENCIAL POINTS
@@ -124,35 +127,17 @@ X <- cbind(rep(1,nrow(cancer2)), cancer2$avgAnnCount,
 H <- X %*% solve(t(X) %*% X) %*% t(X)
 
 #points that exceed 2p/n should be looked more closely
-#delete avgDeathperYear and popest2015 from the data
-names(cancer2)
-cancer2<-cancer2[,-c(2,5)]
 (exc<-2*ncol(cancer2)/nrow(cancer2))
 #0.00902009
-
-#LEVERAGE --------- tutorial
-#to get influence points ----------
-cancer_inf<-influence(fitmodel)
-which(cancer_inf$hat>exc)
-halfnorm(cancer_inf$hat,labs=names(cancer_inf$hat),ylab='Leverage')
-#influential point:
 
 #finding leverage point
 hii <- diag(H)
 studentRes <- studres(fitmodel)
 which(hii>2)
-#no leverage point
 
 #finding influence point- lecture -----------
-which(hii > exc & (studentRes > 3 | studentRes < -3))
+which(hii > exc&(studentRes > 3 | studentRes < -3)) 
 #influential point: 838,1560,2179
-
-
-#cook's distance
-cancer_cook<-cooks.distance(fitmodel)
-sort(cancer_cook,decreasing=TRUE)
-#highest : point 2169: 0.151217962
-#no points greater than 1 
 
 #DATA SPLITTING-------
 #original data
@@ -212,10 +197,43 @@ for(i in 1:5){
   RMSPE=rmse(preds,test_data$DeathRate)
   MAPE=mae(preds,test_data$DeathRate)
 
-  
-  
   print(c(i,R.sq,RMSPE,MAPE))
   
 }
+
+#highest and lowest 3-----------
+
+sortcancer<-cancer[order(-cancer$DeathRate),]
+head(sortcancer)
+tail(sortcancer)
+#highest 3 --> 1182(Union County, Florida),1082(Woodson County, Kansas),966(Madison County, Mississippi)
+#lowest 3 --> 844(Eagle County, Colorado),1549(Presidio County, Texas), 865( Pitkin County, Colorado)
+
+
+
+
+
+
+
+
+#LEVERAGE --------- tutorial
+#high leverage point: 1841,798
+cancer_inf<-influence(fitmodel)
+which(cancer_inf$hat>exc)
+#graph of high leverage
+halfnorm(cancer_inf$hat,labs=names(cancer_inf$hat),ylab='Leverage')
+
+
+#cook's distance
+#library(olsrr)
+#cancer_cook<-cooks.distance(fitmodel)
+#sort(cancer_cook,decreasing=TRUE)
+#which(cancer_cook>1)
+
+#highest : point 2169: 0.151217962
+#no points greater than 1 
+#no influence point
+
+
 
 
