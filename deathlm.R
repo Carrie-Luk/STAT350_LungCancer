@@ -211,11 +211,6 @@ tail(sortcancer)
 
 
 
-
-
-
-
-
 #LEVERAGE --------- tutorial
 #high leverage point: 1841,798
 cancer_inf<-influence(fitmodel)
@@ -224,15 +219,7 @@ which(cancer_inf$hat>exc)
 halfnorm(cancer_inf$hat,labs=names(cancer_inf$hat),ylab='Leverage')
 
 
-#cook's distance
-#library(olsrr)
-#cancer_cook<-cooks.distance(fitmodel)
-#sort(cancer_cook,decreasing=TRUE)
-#which(cancer_cook>1)
 
-#highest : point 2169: 0.151217962
-#no points greater than 1 
-#no influence point
 
 
 
