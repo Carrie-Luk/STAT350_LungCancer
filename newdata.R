@@ -139,3 +139,13 @@ for (i in 1:5){
   
   
 }
+
+#we want to compare the 3 highest incident rates and 3 lowest incident rates
+
+cancer_new <- cancer_new[order(-cancer_new$incidenceRate),]
+
+head(cancer_new)
+
+view(cancer_new)
+
+tail(cancer_new)
