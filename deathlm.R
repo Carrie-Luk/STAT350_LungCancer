@@ -140,15 +140,6 @@ which(hii > exc&(studentRes > 3 | studentRes < -3))
 #influential point: 838,1560,2179
 
 #DATA SPLITTING-------
-#original data
-#new data<- datapoint
-datapoint <- data.frame(avgAnnCount = 3600, avgDeathsPerYear = 1020, TARGET_deathRate = 164.1, incidenceRate = 463.3, medIncome = 90695,
-                        popEst2015 = 717189, povertyPercent = 18.6, MedianAge = 33.9, 
-                        Geography = "Washington, District of Columbia", PctPrivateCoverageAlone = 68,
-                        PctPublicCoverageAlone = 34.1, PctWhite = 41.96, PctBlack = 44.53, PctAsian = 4.35,
-                        PctOtherRace = 9.16)
-
-
 
 #CROSS VALIDATION------------------
 set.seed(71168)
