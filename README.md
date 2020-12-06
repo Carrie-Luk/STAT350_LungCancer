@@ -21,7 +21,7 @@ This leads to our second area of interest, which is looking more specifically at
 
 Therefore, in this study we will be investigating the results for the following two questions:
    1. Which variables contribute more to death and more to incident numbers? Why?
-   2. What are the top three counties with the highest and lowest incidence and death rate
+   2. What are the top three counties with the highest and lowest incidence and death rate? Do they have any specific attributes?
          - This allow us to showcase our findings from question 1 by taking examples straight from our data 
 
 ## Data	Description 
