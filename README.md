@@ -55,5 +55,5 @@ For our additional data point we decided to choose Washington DC for our county 
 ## Methods 
 ## Results 
 ## Conclusion 
-## Appendix
+## Appendix 
 
