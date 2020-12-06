@@ -6,7 +6,7 @@
 **3.** [Data Description](https://github.com/shernatasha/projects/blob/master/README.md#datadescription) \
 **4.** [Methods](https://github.com/shernatasha/projects/blob/master/README.md#methods) \
 **5.** [Results](https://github.com/shernatasha/projects/blob/master/README.md#results) \
-**6.** [Conclusion](https://github.com/shernatasha/projects/blob/master/README.md#conclusion)
+**6.** [Conclusion](https://github.com/shernatasha/projects/blob/master/README.md#conclusion)\
 **7.** [Appendix](https://github.com/shernatasha/projects/blob/master/README.md#appendix) 
 
 ## Abstract
