@@ -43,12 +43,11 @@ names(cancer)
 attach(cancer)
 
 #SCATTER PLOT OF ORIGINAL DATA ---------------
-pairs(DeathRate~medIncome+popEst2015+povertyPercent+MedianAge,data=cancer)
+pairs(DeathRate~medIncome+popEst2015+povertyPercent+MedianAge,main="Death Rate vs medIncome, popEst2015,PovertyPercent, and Median Age",data=cancer)
 #some graph have a negative slope
-pairs(DeathRate~PctPrivateCoverageAlone+PctPublicCoverageAlone,data=cancer)
-pairs(DeathRate~PctWhite+PctBlack+PctAsian+PctOtherRace,data=cancer) 
-pairs(DeathRate~avgAnnCount+avgDeathsPerYear,data=cancer)
-
+pairs(DeathRate~PctPrivateCoverageAlone+PctPublicCoverageAlone,main="Death Rate vs PctPrivateCoverageAlone and PctPublicCoverageAlone",data=cancer)
+pairs(DeathRate~PctWhite+PctBlack+PctAsian+PctOtherRace,main="Death Rate vs ,PctWhite,PctBlack, PctAsian,and PctOtherRace",data=cancer) 
+pairs(DeathRate~avgAnnCount+avgDeathsPerYear,main="Death Rate vs avgAnnCount and avgDeathsPerYear",data=cancer)
 
 #LINEAR MODEL
 #FIT ALL LINEAR MODEL------------
@@ -101,7 +100,7 @@ vif(bestmodel)
 fitmodel<-lm(DeathRate ~ avgAnnCount  + medIncome + 
                           povertyPercent + PctPrivateCoverageAlone + PctPublicCoverageAlone + 
                           PctBlack + PctAsian + PctOtherRace,data = cancer2)
-plot(fitmodel)
+plot(fitmodel,col="dark blue")
 #plot 1 : more data on the right side
 #Plot 2: suggest a slight positive skew to the distribution of the residual, but not large to be concern
 #plot 3: the point slightly slanting upward; less variation on the left
@@ -207,7 +206,7 @@ tail(sortcancer)
 cancer_inf<-influence(fitmodel)
 which(cancer_inf$hat>exc)
 #graph of high leverage
-halfnorm(cancer_inf$hat,labs=names(cancer_inf$hat),ylab='Leverage')
+halfnorm(cancer_inf$hat,labs=names(cancer_inf$hat),ylab='Leverage',main="Leverage Graph")
 
 
 
