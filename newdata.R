@@ -40,12 +40,11 @@ names(cancer_new)
 
 
 #Pair plots of cancer data and splitting data into half 
-colnames(cancer_new)
-cancer_new1 <- cancer_new[,c(1:5)] 
-cancer_new2 <- cancer_new[,c(2,6:10)]
-colnames(cancer_new2)
-pairs(cancer_new1)
-pairs(cancer_new2)
+pairs(cancer_new,
+      main = "Incidence Rate vs avgAnnCount, medIncome, popEst2015, povertyPercent, MedianAge,
+              Pct of Private and Public Coverage, and Pct of White, Black, 
+              Asian and Other Race",
+      cex.main = 0.5)
 
 #incidence model using stepwise regression
 incd.lm <- lm(incidenceRate ~ ., data = cancer_new)
