@@ -2,7 +2,7 @@
 
 ## Index
 1. [Abstract](https://github.com/shernatasha/projects/blob/master/README.md#abstract)
-2. Introduction
+2. [Introduction](https://github.com/shernatasha/projects/blob/master/README.md#introduction)
 3. Data Description
 4. Methods 
 5. Results 
