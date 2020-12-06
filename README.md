@@ -19,22 +19,22 @@ Therefore, in this study we will be investigating the results for the following 
 
 Our dataset contains data about lung cancer demographics relating to US counties collected between 2010 - 2016.
 
-**Description of Variables**
-**deathRate:** Average deaths per 100,000 people (a)
-**avgAnnCount:** Average number of cases diagnosed annually (a)
-**incidenceRate:** Average number of cases per 100,000 people(a)
-**medianIncome:** Median income per US county (b)
-**popEst2015:** Population of the US county (b)
-**povertyPercent:** Percentage of county population in poverty (b)
-**binnedInc:** Median income per capita (b)
-**MedianAge:** Median age of county residents (b)
-**Geography:** County name (b)
-**PctPrivateCoverageAlone:** Percentage of county residents with private health coverage alone (no public assistance) (b)
-**PctPublicCoverageAlone:** Percentage of county residents with government-provided health coverage alone (b)
-**PctWhite:** Percentage of county residents who identify as White (b)
-**PctBlack:** Percentage of county residents who identify as Black (b)
-**PctAsian:** Percentage of county residents who identify as Asian (b)
-**PctOtherRace:** Percentage of county residents who identify in a category which is not White, Black, or Asian (b)
+**Description of Variables** \
+**deathRate:** Average deaths per 100,000 people (a) \
+**avgAnnCount:** Average number of cases diagnosed annually (a) \
+**incidenceRate:** Average number of cases per 100,000 people(a) \
+**medianIncome:** Median income per US county (b) \
+**popEst2015:** Population of the US county (b) \
+**povertyPercent:** Percentage of county population in poverty (b) \
+**binnedInc:** Median income per capita (b) \
+**MedianAge:** Median age of county residents (b) \
+**Geography:** County name (b) \
+**PctPrivateCoverageAlone:** Percentage of county residents with private health coverage alone (no public assistance) (b) \
+**PctPublicCoverageAlone:** Percentage of county residents with government-provided health coverage alone (b) \
+**PctWhite:** Percentage of county residents who identify as White (b) \
+**PctBlack:** Percentage of county residents who identify as Black (b) \
+**PctAsian:** Percentage of county residents who identify as Asian (b) \
+**PctOtherRace:** Percentage of county residents who identify in a category which is not White, Black, or Asian (b) \
 ***The variables with (a) were collected between 2010 - 2016 and the variables with (b) were collected from the 2013 US Census**
 
 A fair amount of cleaning was done to our dataset as we had quite a few observations with missing values. We removed 609 out of the 3047 observations our raw dataset had. We also decided to remove some variables in our dataset as we felt we had a large number of predictors and were worried about variables such as “Percentage of Married Households” and “Household Size” adding noise to our model. Thus by removing these variables which do not relate to not only lung cancer but any form of cancer and focusing on the variables which do, we were able to have a more accessible dataset which contained predictors we believed would have some correlation with incidence and death rates. Another important effect of removing extra variables was that we were able to avoid the risk of overfitting our model which can happen when there are not only too many predictors present but also predictors which would not be good indicators. An example being what does a high correlation between the number of lung cancer deaths and percentage of married households really tell us about our data. We know that an overfit model can cause our regression model to become tailored to the number of predictors we include and will fit the extra “noise” in our dataset and reflect our sample instead of fitting the overall population. Therefore, another benefit to us removing some variables is that our model would better approximate our population instead of tailoring to our sample. 
