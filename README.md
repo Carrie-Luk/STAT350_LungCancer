@@ -53,6 +53,12 @@ Since we choose to analyze which predictors were more significant for death vers
 For our additional data point we decided to choose Washington DC for our county because although it is part of the US, it is not an official state. For the values of the variables, we decided to look up information regarding lung cancer data collected in 2019 for Washington DC. We chose these values since we were interested to see how data from a different year would compare to our dataset. We expected this point to be an outlier as with the U.S. population growing over the years since our data was collected, you would expect the number of cases to also rise. Thus we thought it would be interesting to note the difference in our data from the past and this more recent data point to see if indeed it would be considered an outlier.
 
 ## Methods 
+
+Once we had our cleaned data set consisting of complete observations and the parameters we wished to analyze we started off by taking a look at the pairs plots of our data to assess whether we had any multicollinearity to be concerned about.
+
+![Screenshot (1556)](https://user-images.githubusercontent.com/58491399/101269212-4bcb5f80-3721-11eb-95f2-ffcf7091b276.png)
+**Figure 1: Pairs Plot of All Parameters**
+
 ## Results 
 ## Conclusion 
 ## Appendix 
