@@ -59,7 +59,7 @@ Before we begin fitting models and drawing conclusions from our summary statisti
 Incidence Data            |  Death Data
 :-------------------------:|:-------------------------:
 ![Incidence Model](https://user-images.githubusercontent.com/58491399/101408468-4d1b9a00-3891-11eb-9804-4a4458aab4bc.png)  | ![Death Model](https://user-images.githubusercontent.com/58491399/101408736-b1d6f480-3891-11eb-811f-54e29259696a.png)
-> Click on the plots to expand the picture \
+> Click on the plots to expand the picture 
 
 **Figure 1: Pairs Plots for Our Two Models**
 
