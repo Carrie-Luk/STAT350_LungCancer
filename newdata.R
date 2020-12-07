@@ -80,26 +80,29 @@ outlierTest(incd_new)
 #Scale location plot, line is also slanting downwards
 
 #checking for large vif
+vif(incd_new)
 
 #Finding leverage points 
-X <- cbind(rep(1,nrow(cancer)), cancer_new$avgAnnCount, cancer_new$medIncome,  cancer_new$popEst2015, 
-           cancer_new$MedianAge, cancer_new$PctHS25_Over, cancer_new$PctBachDeg25_Over, cancer_new$PctEmployed16_Over,
+X <- cbind(rep(1,nrow(cancer_new)), cancer_new$avgAnnCount, cancer_new$popEst2015, 
+           cancer_new$MedianAge, cancer_new$PctHS25_Over,
            cancer_new$PctUnemployed16_Over, cancer_new$PctPrivateCoverageAlone,  cancer_new$PctPublicCoverageAlone, 
            cancer_new$PctWhite,  cancer_new$PctBlack,  cancer_new$PctOtherRace)
 H <- X %*% solve(t(X) %*% X) %*% t(X)
 hii <- diag(H)
 studentRes <- studres(incd_new)
-which(hii > 2*ncol(X)/nrow(X) & (studentRes > 3 | studentRes < -3)) 
-#likely to be influential points: 228(Williamsburg city, Virginia), 1430(Hudspeth County, Texas), 2087(Aleutians West Census Area, Alaska), 2104(Apache County, Arizona)
+which(hii > 2*ncol(X)/nrow(X) & (studentRes > 3 | studentRes < -3)) #1430, 1481, 1758, 2087, 2104
+#influential points: 1430(Hudspeth County, Texas), 1481(Presidio County, Texas), 1758(Webster County, Georgia),
+#2087(Aleutians West Census Area, Alaska), 2104(Apache County, Arizona)
 
 #remove influential points
-cancer2 <- cancer_new[-c(228, 1430, 2087, 2104),]
+cancer2 <- cancer_new[-c(1430,1481,1758,2087,2104),]
 incd.new2 <- lm(cancer2$incidenceRate ~ cancer2$avgAnnCount + cancer2$popEst2015 + cancer2$MedianAge + 
                 cancer2$PctHS25_Over + cancer2$PctUnemployed16_Over + cancer2$PctPrivateCoverageAlone + 
                 cancer2$PctPublicCoverageAlone + cancer2$PctWhite + cancer2$PctBlack + cancer2$PctOtherRace, 
                 data = cancer2)
 summary(incd.new2)
 plot(incd.new2)
+
 #Cross validation
 set.seed(123)
 nsamp = ceiling(0.8*length(cancer_new$incidenceRate))
