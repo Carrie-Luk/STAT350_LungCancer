@@ -59,31 +59,31 @@ For our additional data point we decided to choose Washington DC for our county 
 ## Methods 
 > In this section we will be describing the methods used to perform our analysis.
 
-Once our data had been cleaned and was ready to be assessed we first wanted to analyze the pairs plots to ensure that a linear model would make sense with our dataset. A pairs plot consists of scatterplots for every variable combination in our dataset. Thus by analyzing these plots before fitting our model we can determine whether we see any linear relationships between our variables which would be worth exploring.
+Once our data had been cleaned and was ready to be assessed we first wanted to analyze the pairs plots to ensure that a linear model would make sense with our dataset. A pairs plot consists of scatterplots for every variable combination in our dataset. Thus by analyzing these plots before fitting our model we can determine whether we see any linear relationships between our variables which would be worth exploring. \
 
-After assessing the relations between our variables we begin our model fitting by deciding to fit two linear models, one where we use the incidence rate as our dependent and the other using death rate as the independent. Our reasoning behind this approach came from the questions we were looking to answer; which variables contribute more to death and which more to incidence? We started off the models with the same independent variables:
+After assessing the relations between our variables we begin our model fitting by deciding to fit two linear models, one where we use the incidence rate as our dependent and the other using death rate as the independent. Our reasoning behind this approach came from the questions we were looking to answer; which variables contribute more to death and which more to incidence? We started off the models with the same independent variables: \
 
-..*avgAnnCount
-avgDeathsPerYear
-medIncome
-popEst2015
-povertyPercent
-MedianAge
-PctPrivateCoverageAlone
-PctPublicCoverageAlone
-PctWhite
-PctBlack
-PctAsian
-PctOtherRace
-PctHS25_Over
-PctBachDeg25_Over
-PctUnemployed16_Over
+..* avgAnnCount \
+..* avgDeathsPerYear \
+medIncome \
+popEst2015 \
+povertyPercent \
+MedianAge \
+PctPrivateCoverageAlone \
+PctPublicCoverageAlone \
+PctWhite \
+PctBlack \
+PctAsian \
+PctOtherRace \
+PctHS25_Over \
+PctBachDeg25_Over \
+PctUnemployed16_Over \
 
-We fit both models with all the independent variables and perform a thorough analysis including taking a look at the residuals. We start off with the full model to ensure that we are starting off with a functioning model before we start to do any computations and perform any analysis. We also want to ensure that the underlying assumptions are met such as constant variance and normally distributed errors which is why a residual analysis is done. 
+We fit both models with all the independent variables and perform a thorough analysis including taking a look at the residuals. We start off with the full model to ensure that we are starting off with a functioning model before we start to do any computations and perform any analysis. We also want to ensure that the underlying assumptions are met such as constant variance and normally distributed errors which is why a residual analysis is done. \
 
-Then to ensure we had the best performing subset of parameters from our dataset we decided to use not only stepwise regression but also backward elimination to. We know that although it is best to keep as many predictors as possible to ensure that we are able to find all and any factors which relate to either incidence rate or death rate it is also important to not have a large amount of predictors as the variance of our dependent variables increase with the number of predictors. Therefore, with the large number of predictors we had, we believed that variable selection would help us to eliminate any noise created by extra predictors as well as identify any multicollinearity between our predictors. The reason for us choosing to perform two variable selection methods was that so we can compare the models we got out of both and see if there were any differences in model fit. This would ensure that we would be going forward with a model we would feel confident using to answer our questions about this data.
+Then to ensure we had the best performing subset of parameters from our dataset we decided to use not only stepwise regression but also backward elimination to. We know that although it is best to keep as many predictors as possible to ensure that we are able to find all and any factors which relate to either incidence rate or death rate it is also important to not have a large amount of predictors as the variance of our dependent variables increase with the number of predictors. Therefore, with the large number of predictors we had, we believed that variable selection would help us to eliminate any noise created by extra predictors as well as identify any multicollinearity between our predictors. The reason for us choosing to perform two variable selection methods was that so we can compare the models we got out of both and see if there were any differences in model fit. This would ensure that we would be going forward with a model we would feel confident using to answer our questions about this data. \
 
-After we found a subset of predictors we felt confident in analyzing, our next step was to take a look at the residuals again to make sure there are no significant changes as well as assess the normality assumptions. Then we wanted to check whether our variable selection had taken care of any multicollinearity present in our model so we checked the variance inflation factors (VIFs). The VIFs  are the diagonal elements of the inverse of the X’X matrix and they measure the collinearity between the respective beta’s of the regressors. VIF values larger than 10 identify serious multicollinearity problems, thus we will compare our computed VIF values to 10. It is important to identify any multicollinearity present in a linear model as it can cause poor prediction equations as well as sensitive regression coefficients. Therefore, by identifying these predictors beforehand we are ensuring that we are able to make predictions and confidently use our model to evaluate the relationship between our predictors and dependents. 
+After we found a subset of predictors we felt confident in analyzing, our next step was to take a look at the residuals again to make sure there are no significant changes as well as assess the normality assumptions. Then we wanted to check whether our variable selection had taken care of any multicollinearity present in our model so we checked the variance inflation factors (VIFs). The VIFs  are the diagonal elements of the inverse of the X’X matrix and they measure the collinearity between the respective beta’s of the regressors. VIF values larger than 10 identify serious multicollinearity problems, thus we will compare our computed VIF values to 10. It is important to identify any multicollinearity present in a linear model as it can cause poor prediction equations as well as sensitive regression coefficients. Therefore, by identifying these predictors beforehand we are ensuring that we are able to make predictions and confidently use our model to evaluate the relationship between our predictors and dependents. \
 
 
 ## Results 
