@@ -44,7 +44,7 @@ cancer_new <- cancer[,-c(2,3,9)]
 names(cancer_new)
 
 
-#Pair plots of cancer data and splitting data into half 
+#Pair plots of cancer data 
 
 pairs(cancer_new,
       main = "Incidence Rate vs avgAnnCount, medIncome, popEst2015, povertyPercent, MedianAge, Pct of Bach's and HS over 25,
@@ -103,11 +103,11 @@ summary(incd.new2)
 
 #Cross validation
 set.seed(123)
-nsamp = ceiling(0.8*length(cancer_new$incidenceRate))
-training_samps <- sample(c(1:length(cancer_new$incidenceRate)), nsamp)
+nsamp = ceiling(0.8*length(cancer2$incidenceRate))
+training_samps <- sample(c(1:length(cancer2$incidenceRate)), nsamp)
 training_samps <- sort(training_samps)
-train_data <- cancer_new[training_samps, ]
-test_data <- cancer_new[-training_samps, ]
+train_data <- cancer2[training_samps, ]
+test_data <- cancer2[-training_samps, ]
 
 #Fit model using training data
 attach(train_data)
@@ -132,11 +132,11 @@ RMSPE/sd(test_data$incidenceRate)
 set.seed(123)
 
 for (i in 1:5){
-  nsamp = ceiling(0.8*length(cancer_new$incidenceRate))
-  training_samps <- sample(c(1:length(cancer_new$incidenceRate)), nsamp)
+  nsamp = ceiling(0.8*length(cancer2$incidenceRate))
+  training_samps <- sample(c(1:length(cancer2$incidenceRate)), nsamp)
   training_samps <- sort(training_samps)
-  train_data <- cancer_new[training_samps, ]
-  test_data <- cancer_new[-training_samps, ]
+  train_data <- cancer2[training_samps, ]
+  test_data <- cancer2[-training_samps, ]
   dim(test_data)
   
   #Fit model using training data
