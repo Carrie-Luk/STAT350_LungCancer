@@ -60,6 +60,7 @@ Incidence Data            |  Death Data
 :-------------------------:|:-------------------------:
 ![Incidence Model](https://user-images.githubusercontent.com/58491399/101408468-4d1b9a00-3891-11eb-9804-4a4458aab4bc.png)  | ![Death Model](https://user-images.githubusercontent.com/58491399/101408736-b1d6f480-3891-11eb-811f-54e29259696a.png)
 > Click on the plots to expand the picture \
+
 **Figure 1: Pairs Plots for Our Two Models**
 
 We can see in both of our plots that we definitely see relationships between many of the variables, especially between our respective dependent and independent variables. Therefore we would like to move forward and begin fitting models to further investigate these relationships.
