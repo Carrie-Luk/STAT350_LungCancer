@@ -100,7 +100,7 @@ summary(bestmodel)
 #VIF------
 
 vif(bestmodel) 
-#since the VIF of avgDeathsPerYear (31.813859 ) and popEst2015(26.690564 ) are greater than 10, we exclude from the best model
+#since the VIF of avgDeathsPerYear (31.813859) and popEst2015(26.690564 ) are greater than 10, we exclude from the best model
 
 #exclude popEst2015 and avgDeathsPerYear-----------------
 #newdata called fitmodel -------------------
@@ -112,6 +112,7 @@ plot(fitmodel,col="dark blue")
 #plot 1 : almost equally distributed, more data on the right
 #plot 3: the point slightly slanting upward; less variation on the left
 #plot 4: no points exceed the cook's distance
+
 
 #SUMMARY OF FIT MODEL-----------
 summary(fitmodel)
@@ -146,12 +147,11 @@ which(hii > exc&(studentRes > 3 | studentRes < -3))
 view(cancer2)
 
 #after removing influential point
-h<-cancer2[-c(798,1430,1492),]
-h2<-lm(DeathRate ~ avgAnnCount + povertyPercent + PctHS25_Over + PctBachDeg25_Over + PctUnemployed16_Over + 
+rmvinfluential<-cancer2[-c(798,1430,1492),]
+woinfluential.lm<-lm(DeathRate ~ avgAnnCount + povertyPercent + PctHS25_Over + PctBachDeg25_Over + PctUnemployed16_Over + 
          PctPrivateCoverageAlone + PctPublicCoverageAlone + PctWhite + 
          PctOtherRace, data = cancer2)
-summary(h2)
-summary(fitmodel)
+summary(woinfluential.lm)
 
 #DATA SPLITTING-------
 
@@ -168,6 +168,7 @@ train.lm<-lm(DeathRate~avgAnnCount + povertyPercent + PctHS25_Over + PctBachDeg2
                PctPrivateCoverageAlone + PctPublicCoverageAlone + PctWhite + 
                PctOtherRace,data=train_data)
 summary(train.lm)
+
 
 #PREDICT THE RESPONSES ON THE TEST SET--------------
 preds<-predict(train.lm,test_data)
@@ -213,7 +214,7 @@ for(i in 1:5){
 sortcancer<-cancer[order(-cancer$DeathRate),]
 head(sortcancer)
 tail(sortcancer)
-#highest 3 --> 1034(Woodson County, Kansas),920(Madison County, Mississippi ),1986(Powell County, Kentucky )
+#highest 3 --> 1034(Woodson County, Kansas),920(Madison County, Mississippi),1986(Powell County, Kentucky)
 #lowest 3 --> 804(Eagle County, Colorado),1481(Presidio County, Texas), 825( Pitkin County, Colorado)
 
 
