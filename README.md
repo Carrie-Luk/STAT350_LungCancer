@@ -63,8 +63,8 @@ Once our data had been cleaned and was ready to be assessed we first wanted to a
 
 After assessing the relations between our variables we begin our model fitting by deciding to fit two linear models, one where we use the incidence rate as our dependent and the other using death rate as the independent. Our reasoning behind this approach came from the questions we were looking to answer; which variables contribute more to death and which more to incidence? We started off the models with the same independent variables: \
 
-..* avgAnnCount \
-..* avgDeathsPerYear \
+-avgAnnCount \
+- avgDeathsPerYear \
 medIncome \
 popEst2015 \
 povertyPercent \
