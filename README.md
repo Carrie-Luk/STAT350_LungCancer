@@ -60,7 +60,21 @@ Once we had our cleaned data set consisting of complete observations and the par
 ![Screenshot (1556)](https://user-images.githubusercontent.com/58491399/101269212-4bcb5f80-3721-11eb-95f2-ffcf7091b276.png)
 **Figure 1: Pairs Plot of All Parameters**
 
-From the pairs plot of our cleaned dataset we can make some important observations. First we see that some variables have a near linear relationship, such as povertyPercent and PctPublicCoverageAlone and also PctWhite and PctBlack. However, if we take a look at what these variables stand for it does make sense that there is some correlation between the two. Going off of the examples mentioned, there should be some sort of relationship between povertyPercent and PctPublicCoverageAlone. We know that private health care can be quite expensive so not everyone can afford to have it. Thus, if we have a higher percentage of people in poverty in a specific country, it would make sense that less people would be able to afford private health care coverage and therefore these two parameters share a negative relationship. Similarly with parameters such as PctWhite and PctBlack, the higher the caucasian population of a country, the lower the African American population will be. Here again, we expect a negative near linear relationship. Although we are not surprised to see some relationships between our parameters we will later check the variance inflation factors to ensure that multicollinearity will not affect our ability to estimate the coefficients in the model. 
+From the pairs plot of our cleaned dataset we can make some important observations. First we see that some variables have a near linear relationship, such as povertyPercent and PctPublicCoverageAlone and also PctWhite and PctBlack. However, if we take a look at what these variables stand for it does make sense that there is some correlation between the two. Going off of the examples mentioned, there should be some sort of relationship between povertyPercent and PctPublicCoverageAlone. We know that private health care can be quite expensive so not everyone can afford to have it. Thus, if we have a higher percentage of people in poverty in a specific country, it would make sense that less people would be able to afford private health care coverage and therefore these two parameters share a negative relationship. Similarly with parameters such as PctWhite and PctBlack, the higher the caucasian population of a country, the lower the African American population will be. Here again, we expect a negative near linear relationship. Although we are not surprised to see some relationships between our parameters we will later check the variance inflation factors to ensure that multicollinearity will not affect our ability to estimate the coefficients in the model.
+
+We wanted to create a model that would provide us with the best performance out of our data  so we decided to use stepwise regression to find the subset of parameters from our dataset which would provide us with a best fitting model. This would allow us to remove any inessential variables and keep only those which would provide a meaningful explanation to what we wished to learn from our model. Our reasoning behind choosing a stepwise regression and not a forward selection or backward elimination was the presence of many potential predictors. We believed that performing a stepwise regression would decrease the chances of human error. 
+
+…
+
+Once our model was fit we took a look at the plots to analyze any potential influential points as well as the fit of the model. 
+
+…
+
+We also revisited the potential presence of multicollinearity in our model and took a look at the variance inflation factors (VIFs) of our predictors. We performed the following test:
+
+*insert image of VIFs for both models*
+
+For our incidence model we found that all the VIFs were less than 10 so our concerns about some strong linear relations between our predictors were diminished. However, in our death model we can see that avgDeathsPerYear as well as popEst2015 had some very large values, more than double what our range was. A high VIF is an indication that the predictors associated with the high VIF values are poorly estimated because of multicollinearity. It is not useful to have variables in our model which are not being predicted accurately as this can decrease the overall fit of our model. Therefore we decided to remove these predictors from our model.
 
 
 ## Results 
