@@ -72,8 +72,37 @@ Once we had a model which included only the parameters which were essential to o
 
 For our incidence model we found that all the VIFs were less than 10 so our concerns about some strong linear relations between our predictors were diminished. However, in our death model we can see that avgDeathsPerYear as well as popEst2015 had some very large values, more than double what our range was. A high VIF is an indication that the predictors associated with the high VIF values are poorly estimated because of multicollinearity. It is not useful to have variables in our model which are not being predicted accurately as this can decrease the overall fit of our model. Therefore we decided to remove these predictors from our model.
 
+Now that we had models which were as best a fit as we were able to compute we decided to take a look at the plots once more to reassess our new model. Since we did not remove any predictors from our incidence model, we will only be looking at plots for our death model.
+
+*insert picture of death plot*
+
+From these plots we see…
+
+After assuring we had the most accurate subset of parameters for our analysis we took a closer look at our data to search for any outliers and influential points before taking a look at our model summaries. We used the following code in both of our models to assess whether we had any data points to be concerned about. 
+
+*incidence model code*
+
+*explanation*
+
+Then we looked at our death model:
+
+*death model code*
+
+*explanation*
+
+Now that we had our influential points we decided to remove them from the model and reassess to see if in fact these data points were causing any irregularities to our models.
+
+
 
 ## Results 
 ## Conclusion 
+To address the first question we had in this study, we will start off with the first variable, avgAnnCount. We see it has more effect on the incidence model which makes sense since this variable is the number of reported cases annually. However, the variable medIncome affects the death model a lot more than the other. The reason for this is presumably because treatment for cancer costs more than a diagnosis. Therefore, one’s income level has a more important role in life or death.
+
+As we have mentioned previously, one of our expectations was for povertyPercent to affect the death model more, and we see that this is indeed the case. After performing the stepwise regression for both the incidence and death model, we see that povertyPercent is not an important variable for the incidence model. Therefore, we only kept it in our death model.
+
+Health care in the US is one of the reasons most people go bankrupt. This is because they don’t have universal health care and so citizens can either choose between private health care insurance of government funded insurance. While private health care is more expensive, it is also more flexible and so most Americans end up choosing this option. It is no surprise that private and public health care appears to affect both our incidence and death model. However, we do see that private health care affects our incidence model more since the p-value for the incidence model is lower than the death model. We believe that this is due to the fact that private health care coverage is better than public health coverage.
+
+Why are Asians not included in the incidence model? They are included when I do forward selection, however we notice that the adjusted R-Square for the forward selection and stepwise regression is the same whether we include PctAsians or not. Therefore we conclude that PctAsians does not have much of an impact on our incidence model. One reason for this could be the fact that the percentage of asians in the US is relatively small and looking at our given dataset, PctAsians has the highest number of zeros with 194 total. This could mean that PctAsian is more inaccurate compared to the other percentages or perhaps the numbers were so low it got rounded to 0. Why are Whites not included in the death model? If we do include PctWhite, it would lower the adjusted R square.
+
 ## Appendix 
 
