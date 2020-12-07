@@ -168,7 +168,8 @@ head(sortdata)
 #highest 3: 228(Williamsburg City, Virginia), 207(Charlottesville city, Virginia), 1986(Powell County, Kentucky)
 
 tail(sortdata)
-#lowest 3: 26(Doddrige County, West Virginia), 801(Dolores County, Colorado), 84(Stanton County, Nebraska)
+#lowest 3: 1430(Hudspeth County, Texas), 1481(Presidio County, Texas), 2087(Aleutians West Census Area, Alaska)
+
 
 
 
