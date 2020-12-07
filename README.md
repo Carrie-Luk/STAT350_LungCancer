@@ -97,10 +97,12 @@ Now that we have fitted our model and identified any influential points, dealing
 	Ho : β1 = β2 = . . . = βk = 0 vs.
             HA : βj doesn’t =  0 for at least one j.
 
-Then, once we have assessed our summary one of the last steps we would like to conduct is model validation. Before we interpret our findings and begin to answer our questions about the data we will assess the validity of the model. This is to not only ensure we as the creators have created a model which will give us accurate descriptions of our ...
+Then, once we have assessed our summary one of the last steps we would like to conduct is model validation. Before we interpret our findings and begin to answer our questions about the data we will assess the validity of the model. This is to not only ensure that we as the creators have created a model which will accurately operate in our analysis but also be useful for others to conduct their own analysis’. We chose to perform model validation by studying the regression coefficients and determining whether their signs and magnitudes are reasonable as well as investigating the prediction performance of the model. Since we are unable to collect new data for our dataset we decided to perform model validation by cross validation. In cross validation we split our data into two sets, an estimation set and a prediction data. We use the estimation set to build our regression model and our prediction set to study the predictability of the estimation set. …..
 
-- Model validation
-- Answer questions with model 
+...add explanation of how validation was performed
+
+Finally, the last step in our investigation regarding which factors are more significant to death than incidence would be to interpret our  findings. Now that We have fitted our model, found any influential points, analyzed signs of multicollinearity and done all else to ensure we have the best performing models for our project we can take a look at our findings and be able to answer our questions regarding this dataset. 
+
 
 ## Results 
 ## Conclusion 
