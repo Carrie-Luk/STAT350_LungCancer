@@ -38,6 +38,10 @@ Our dataset contains data about lung cancer demographics relating to US counties
 **binnedInc:** Median income per capita (b) \
 **MedianAge:** Median age of county residents (b) \
 **Geography:** County name (b) \
+**PctHS25_Over:** Percentage of county residents ages 25 and over with their highest education attained being a high school diploma (b) \
+**PctBachDeg25_Over:** Percentage of county residents ages 25 and over with their highest education attained being a bachelor's degree (b) \
+**PctEmployed16_Over:** Percentage of county residents ages 16 and over who are employed (b) \
+**PctUnemployed16_Over:** Percentage of county residents ages 16 and over who are unemployed (b) \
 **PctPrivateCoverageAlone:** Percentage of county residents with private health coverage alone (no public assistance) (b) \
 **PctPublicCoverageAlone:** Percentage of county residents with government-provided health coverage alone (b) \
 **PctWhite:** Percentage of county residents who identify as White (b) \
