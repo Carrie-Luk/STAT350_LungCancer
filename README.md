@@ -76,7 +76,7 @@ After assessing the relations between our variables we begin our model fitting b
 - PctHS25_Over 
 - PctBachDeg25_Over 
 - PctUnemployed16_Over 
-> the incidence model did not include avgDeathsPerYear as we felt it did not make sense to use this variable as a predictor for the number of cases 
+> The incidence model did not include avgDeathsPerYear as we felt it did not make sense to use this variable as a predictor for the number of cases 
 
 We fit both models with all the independent variables and perform a thorough analysis including taking a look at the residuals. We start off with the full model to ensure that we are starting off with a functioning model before we start to do any computations and perform any analysis. We also want to ensure that the underlying assumptions are met such as constant variance and normally distributed errors which is why a residual analysis is done. 
 
