@@ -52,10 +52,19 @@ pairs(cancer_new,
               Asian and Other Race",
       cex.main = 0.5)
 
-#incidence model using backward regression
+#incidence model using backward and cancer regression
 incd.lm <- lm(incidenceRate ~ ., data = cancer_new)
+step(incd.lm, direction = 'both')
 step(incd.lm, direction = 'backward')
 
+#using stepwise regression
+incd_new1 <- lm(cancer_new$incidenceRate ~ cancer_new$avgAnnCount + cancer_new$popEst2015 + 
+                  cancer_new$MedianAge + cancer_new$PctHS25_Over + 
+                  cancer_new$PctUnemployed16_Over + cancer_new$PctPrivateCoverageAlone + 
+                  cancer_new$PctPublicCoverageAlone + cancer_new$PctWhite + cancer_new$PctBlack + 
+                  cancer_new$PctOtherRace, data = cancer_new)
+
+#using backward regression
 incd_new <- lm(cancer_new$incidenceRate ~ cancer_new$avgAnnCount + cancer_new$popEst2015 + 
                 cancer_new$MedianAge + cancer_new$PctHS25_Over + 
                 cancer_new$PctUnemployed16_Over + cancer_new$PctPrivateCoverageAlone + 
@@ -81,7 +90,16 @@ X <- cbind(rep(1,nrow(cancer)), cancer_new$avgAnnCount, cancer_new$medIncome,  c
 H <- X %*% solve(t(X) %*% X) %*% t(X)
 hii <- diag(H)
 studentRes <- studres(incd_new)
-which(hii > 2*ncol(X)/nrow(X) & (studentRes > 3 | studentRes < -3)) #likely to be influential points: 228, 1430, 2087, 2104
+which(hii > 2*ncol(X)/nrow(X) & (studentRes > 3 | studentRes < -3)) 
+#likely to be influential points: 228(Williamsburg city, Virginia), 1430(Hudspeth County, Texas), 2087(Aleutians West Census Area, Alaska), 2104(Apache County, Arizona)
+
+#remove influential points
+cancer2 <- cancer_new[-c(228, 1430, 2087, 2104),]
+incd.new2 <- lm(cancer2$incidenceRate ~ cancer2$avgAnnCount + cancer2$popEst2015 + cancer2$MedianAge + 
+                cancer2$PctHS25_Over + cancer2$PctUnemployed16_Over + cancer2$PctPrivateCoverageAlone + 
+                cancer2$PctPublicCoverageAlone + cancer2$PctWhite + cancer2$PctBlack + cancer2$PctOtherRace, 
+                data = cancer2)
+summary(incd.new2)
 
 #Cross validation
 set.seed(123)
@@ -142,13 +160,14 @@ for (i in 1:5){
 
 #we want to compare the 3 highest incident rates and 3 lowest incident rates
 
-cancer_new <- cancer_new[order(-cancer_new$incidenceRate),]
+sortdata <- cancer[order(-cancer$incidenceRate),]
 
-head(cancer_new)
+head(sortdata)
+#highest 3: 228(Williamsburg City, Virginia), 207(Charlottesville city, Virginia), 1986(Powell County, Kentucky)
 
-view(cancer_new)
+tail(sortdata)
+#lowest 3: 26(Doddrige County, West Virginia), 801(Dolores County, Colorado), 84(Stanton County, Nebraska)
 
-tail(cancer_new)
 
 
 
