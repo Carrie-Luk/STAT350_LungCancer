@@ -29,7 +29,9 @@ Therefore, in this study we will be investigating the results for the following 
 Our dataset contains data about lung cancer demographics relating to US counties collected between 2010 - 2016.
 
 **Description of Variables** \
-**deathRate:** Average deaths per 100,000 people (a) \
+| Variable | Description | Type |
+| --- | --- |
+| **deathRate** | Average deaths per 100,000 people | (a) |
 **avgAnnCount:** Average number of cases diagnosed annually (a) \
 **incidenceRate:** Average number of cases per 100,000 people(a) \
 **medianIncome:** Median income per US county (b) \
