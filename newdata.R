@@ -80,7 +80,6 @@ outlierTest(incd_new)
 #Scale location plot, line is also slanting downwards
 
 #checking for large vif
-vif(incd_new) #all vifs < 10 so not large
 
 #Finding leverage points 
 X <- cbind(rep(1,nrow(cancer)), cancer_new$avgAnnCount, cancer_new$medIncome,  cancer_new$popEst2015, 
@@ -100,14 +99,14 @@ incd.new2 <- lm(cancer2$incidenceRate ~ cancer2$avgAnnCount + cancer2$popEst2015
                 cancer2$PctPublicCoverageAlone + cancer2$PctWhite + cancer2$PctBlack + cancer2$PctOtherRace, 
                 data = cancer2)
 summary(incd.new2)
-
+plot(incd.new2)
 #Cross validation
 set.seed(123)
-nsamp = ceiling(0.8*length(cancer2$incidenceRate))
-training_samps <- sample(c(1:length(cancer2$incidenceRate)), nsamp)
+nsamp = ceiling(0.8*length(cancer_new$incidenceRate))
+training_samps <- sample(c(1:length(cancer_new$incidenceRate)), nsamp)
 training_samps <- sort(training_samps)
-train_data <- cancer2[training_samps, ]
-test_data <- cancer2[-training_samps, ]
+train_data <- cancer_new[training_samps, ]
+test_data <- cancer_new[-training_samps, ]
 
 #Fit model using training data
 attach(train_data)
@@ -132,11 +131,11 @@ RMSPE/sd(test_data$incidenceRate)
 set.seed(123)
 
 for (i in 1:5){
-  nsamp = ceiling(0.8*length(cancer2$incidenceRate))
-  training_samps <- sample(c(1:length(cancer2$incidenceRate)), nsamp)
+  nsamp = ceiling(0.8*length(cancer_new$incidenceRate))
+  training_samps <- sample(c(1:length(cancer_new$incidenceRate)), nsamp)
   training_samps <- sort(training_samps)
-  train_data <- cancer2[training_samps, ]
-  test_data <- cancer2[-training_samps, ]
+  train_data <- cancer_new[training_samps, ]
+  test_data <- cancer_new[-training_samps, ]
   dim(test_data)
   
   #Fit model using training data
