@@ -95,7 +95,7 @@ Once we had identified our influential observations we needed to take a closer l
 
 Now that we had fitted our model and identified any influential points, dealing with them however we decided to, we took a look at the summary of our models and began performing our analysis. Here, we did a residual analysis on our now completed models, took a look at the summary statistics and interpreted values such as our adjusted R^2 to see how well we fit the model, the residual standard error to assess the quality of our fit, and of course conducted a hypothesis test to see if there is a significant linear relationship between at least one of the predictors and the response. Our hypothesis test would consider:
 	Ho : βj = 0 vs.
-            HA : βj \neq  0 for at least one j
+            HA : βj !==  0 for at least one j
 	    
 and would reject the null hypothesis if our p-value associated with the models we created was smaller than an alpha of 0.05. 
 
