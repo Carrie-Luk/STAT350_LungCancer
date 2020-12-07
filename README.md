@@ -66,11 +66,7 @@ We wanted to create a model that would provide us with the best performance out 
 
 …
 
-Once our model was fit we took a look at the plots to analyze any potential influential points as well as the fit of the model. 
-
-…
-
-We also revisited the potential presence of multicollinearity in our model and took a look at the variance inflation factors (VIFs) of our predictors. We performed the following test:
+Once we had a model which included only the parameters which were essential to our respective dependent variables, we revisited the potential presence of multicollinearity in our model and took a look at the variance inflation factors (VIFs) of our predictors. We performed the following test:
 
 *insert image of VIFs for both models*
 
