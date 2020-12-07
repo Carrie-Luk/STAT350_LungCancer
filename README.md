@@ -91,7 +91,8 @@ We will identify leverage points by taking a look at the diagonal elements of ou
 
 We consider observations that have not only large diagonal values in the hat matrix but also a large Cook’s distance to be influential. Cook’s distance is measured by:
 ![Screenshot (1562)](https://user-images.githubusercontent.com/58491399/101383571-29932800-386e-11eb-9439-326b3a2b6c46.png) \
-> where $$r_i$$ is the residual value, $$h_ii$$ is the diagonal on the hat matrix and p is the number of regressors 
+> where r_i is the residual value, h_ii is the diagonal on the hat matrix and p is the number of regressors \
+
 and what it does is measure the effect of deleting a specific observation. Values greater than one are considered to be influential. Thus, if the deletion of an observation creates an effect larger than one, we consider it to be an influential observation. 
 
 Once we identify our influential observations we need to take a closer look to determine what should be done with them. Is there a reason these observations are influential? Would removing the observations and refitting our model give us a better fitting regression line? Is the data point valid or was there a mistake made in data collection? These questions need to be asked before discarding what could be valuable observations. 
