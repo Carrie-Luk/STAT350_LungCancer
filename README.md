@@ -59,7 +59,9 @@ Before we begin fitting models and drawing conclusions from our summary statisti
 Incidence Data            |  Death Data
 :-------------------------:|:-------------------------:
 ![Incidence Model](https://user-images.githubusercontent.com/58491399/101408468-4d1b9a00-3891-11eb-9804-4a4458aab4bc.png)  | ![Death Model](https://user-images.githubusercontent.com/58491399/101408736-b1d6f480-3891-11eb-811f-54e29259696a.png)
+> Click on the plots to expand the picture
 
+We can see in both of our plots that we definitely see relationships between many of the variables, especially between our respective dependent and independent variables. Therefore we would like to move forward and begin fitting models to further investigate these relationships.
 
 For our additional data point we decided to choose Washington DC for our county because although it is part of the US, it is not an official state. For the values of the variables, we found information regarding lung cancer data collected in 2020 for Washington DC from the [American Cancer Society](https://cancerstatisticscenter.cancer.org/#!/state/District%20of%20Columbia) and combined this with US 2020 census information from [DC Health Matters](https://www.dchealthmatters.org/index.php?module=demographicdata&controller=index&action=index). We chose these values since we were interested to see how data from a different year would compare to our dataset. We expected this point to be an outlier as with the U.S. population growing over the years since our data was collected, you would expect the number of cases to also rise. Thus we thought it would be interesting to note the difference in our data from the past and this more recent data point to see if indeed it would be considered an outlier.
 
