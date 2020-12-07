@@ -61,6 +61,7 @@ incd_new <- lm(cancer_new$incidenceRate ~ cancer_new$avgAnnCount + cancer_new$po
                 cancer_new$PctUnemployed16_Over + cancer_new$PctPrivateCoverageAlone + 
                 cancer_new$PctPublicCoverageAlone + cancer_new$PctWhite + cancer_new$PctBlack + 
                 cancer_new$PctOtherRace, data = cancer_new)
+summary(incd_new)
 
 plot(incd_new) 
 outlierTest(incd_new)
