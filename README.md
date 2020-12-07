@@ -63,21 +63,21 @@ Once our data had been cleaned and was ready to be assessed we first wanted to a
 
 After assessing the relations between our variables we begin our model fitting by deciding to fit two linear models, one where we use the incidence rate as our dependent and the other using death rate as the independent. Our reasoning behind this approach came from the questions we were looking to answer; which variables contribute more to death and which more to incidence? We started off the models with the same independent variables: \
 
--avgAnnCount \
+- avgAnnCount \
 - avgDeathsPerYear \
-medIncome \
-popEst2015 \
-povertyPercent \
-MedianAge \
-PctPrivateCoverageAlone \
-PctPublicCoverageAlone \
-PctWhite \
-PctBlack \
-PctAsian \
-PctOtherRace \
-PctHS25_Over \
-PctBachDeg25_Over \
-PctUnemployed16_Over \
+- medIncome \
+- popEst2015 \
+- povertyPercent \
+- MedianAge \
+- PctPrivateCoverageAlone \
+- PctPublicCoverageAlone \
+- PctWhite \
+- PctBlack \
+- PctAsian \
+- PctOtherRace \
+- PctHS25_Over \
+- PctBachDeg25_Over \
+- PctUnemployed16_Over \
 
 We fit both models with all the independent variables and perform a thorough analysis including taking a look at the residuals. We start off with the full model to ensure that we are starting off with a functioning model before we start to do any computations and perform any analysis. We also want to ensure that the underlying assumptions are met such as constant variance and normally distributed errors which is why a residual analysis is done. \
 
