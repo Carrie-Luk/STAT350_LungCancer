@@ -145,6 +145,14 @@ which(hii > exc&(studentRes > 3 | studentRes < -3))
 #influential point: 798(Crowley County, Colorado),1430(Hudspeth County, Texas),1492(Schleicher County, Texas)
 view(cancer2)
 
+#after removing influential point
+h<-cancer2[-c(798,1430,1492),]
+h2<-lm(DeathRate ~ avgAnnCount + povertyPercent + PctHS25_Over + PctBachDeg25_Over + PctUnemployed16_Over + 
+         PctPrivateCoverageAlone + PctPublicCoverageAlone + PctWhite + 
+         PctOtherRace, data = cancer2)
+summary(h2)
+summary(fitmodel)
+
 #DATA SPLITTING-------
 
 #CROSS VALIDATION------------------
