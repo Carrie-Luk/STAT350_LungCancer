@@ -148,6 +148,27 @@ Health care in the US is one of the reasons most people go bankrupt. This is bec
 
 Why are Asians not included in the incidence model? They are included when I do forward selection, however we notice that the adjusted R-Square for the forward selection and stepwise regression is the same whether we include PctAsians or not. Therefore we conclude that PctAsians does not have much of an impact on our incidence model. One reason for this could be the fact that the percentage of asians in the US is relatively small and looking at our given dataset, PctAsians has the highest number of zeros with 194 total. This could mean that PctAsian is more inaccurate compared to the other percentages or perhaps the numbers were so low it got rounded to 0. The reason PctWhite is not included in the death model is because if we do, it would lower the adjusted R square.
 
+To further support the effect of the variables we have mentioned, we will answer the second question by looking at our sorted data and listing out the counties:
+Starting with the county with the highest incidence rate, the top three are:
+Williamsburg City, Virginia
+Charlottesville city, Virginia
+Powell County, Kentucky
+
+The counties with the lowest incidence rate are:
+Hudspeth County, Texas
+Presidio County, Texas
+Aleutians West Census Area, Alaska
+
+The counties with the highest death rate are:
+Woodson County, Kansas
+Madison County, Mississippi
+Powell County, Kentucky
+
+The counties with the lowest death rate are:
+Eagle County, Colorado
+Presidio County, Texas
+Pitkin County, Colorado
+
 An interesting observation is that Aleutians West Census Area has a very low poverty percentage, which is also correlated with the high median income which we do see. Our data analysis implied that it is likely for the county to have a low incidence rate if the citizens have the resources to keep themselves healthy. However, the same could go for the other end of the spectrum: having the resources to be unhealthy, which could explain why counties with high incidence rates also have a high median income.
 
 What differentiates the highest three counties and the lowest three counties? Poverty percentage appears to be lower in the counties with the lowest incidence rate, however the difference does not appear to be significant. The county with the highest incidence rate: Williamsburg City has a lower poverty percentage than Hudspeth County and Presidio County. This aligns with our stepwise regression model as we did not include poverty percentage since we believed it does not make a significant difference. Meanwhile in our death model, we see that the poverty percentage has a bigger impact. The numbers do appear to be much smaller for the counties with the lowest death rate, while they are higher for the counties with the highest death rate.
