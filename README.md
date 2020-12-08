@@ -70,7 +70,7 @@ For our additional data point we decided to choose Washington DC for our county 
 ## Methods 
 > In this section we will be describing the methods used to perform our analysis.
 
-After assessing the relations between our variables we begin our model fitting by deciding to fit two linear models, one where we use the incidence rate as our dependent and the other using death rate as the independent. Our reasoning behind this approach came from the questions we were looking to answer; which variables contribute more to death and which more to incidence? We started off the models with the same independent variables except for one: 
+After assessing the relations between our variables we began our model fitting. We started off the models with the same independent variables except for one: 
 
 - avgAnnCount 
 - avgDeathsPerYear 
