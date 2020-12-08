@@ -1,4 +1,4 @@
-![Cancer Graphic](https://user-images.githubusercontent.com/58491399/101261025-d93e8d80-36e8-11eb-9fce-ff649b77174c.jpeg)
+![Large Rectangle 336x280 px](https://user-images.githubusercontent.com/58491399/101435811-d3e86b00-38c1-11eb-9adf-cfaf5325e523.jpeg)
 
 ## Index
 **1.** [Abstract](https://github.com/shernatasha/projects/blob/master/README.md#abstract) \
