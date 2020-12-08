@@ -140,15 +140,22 @@ Our Normal Q-Q plot has some slight deviations than the incidence model but this
 
 ![highestincidencerate](https://user-images.githubusercontent.com/58402986/101435758-c03d0480-38c1-11eb-86c6-7713a9750c9f.jpg)
 
+**Figure 4: Top 3 Counties with the Highest Incidence Rate**
+
 ![lowestincidencerate](https://user-images.githubusercontent.com/58402986/101436959-0a26ea00-38c4-11eb-9d82-51663c512a17.jpg)
+
+**Figure 5: Bottom 3 Counties with the Lowest Incidence Rate**
 
 ![highestdeathrate](https://user-images.githubusercontent.com/58402986/101437038-37739800-38c4-11eb-8c25-3b4bf56a70f7.jpg)
 
-![lowestdeathrate](https://user-images.githubusercontent.com/58402986/101437096-52460c80-38c4-11eb-8bc8-129116adf3e9.jpg)
-## Conclusion 
-Starting off with avgAnnCount, we see it has more effect on the incidence model which makes sense since this variable is the number of reported cases annually. However, the variable medIncome affects the death model a lot more than the other. The reason for this is presumably because treatment for cancer costs more than a diagnosis. Therefore, one’s income level has a more important role in life or death.
+**Figure 6: Top 3 Counties with the Highest Death Rate**
 
-As we have mentioned previously, one of our expectations was for povertyPercent to affect the death model more, and we see that this is indeed the case. After performing the stepwise regression for both the incidence and death model, we see that povertyPercent is not an important variable for the incidence model. Therefore, we only kept it in our death model.
+![lowestdeathrate](https://user-images.githubusercontent.com/58402986/101437096-52460c80-38c4-11eb-8bc8-129116adf3e9.jpg)
+
+**Figure 7: Bottom 3 Counties with the Lowest Death Rate**
+
+## Conclusion 
+To address our questions of interest, we will go through several of the variables and discuss the impact it has on our models. Starting off with avgAnnCount, we see it has more effect on the incidence model which makes sense since this variable is the number of reported cases annually. However, the variable medIncome affects the death model a lot more than the other. The reason for this is presumably because treatment for cancer costs more than a diagnosis. Therefore, one’s income level has a more important role in life or death. As we have mentioned previously, one of our expectations was for povertyPercent to affect the death model more, and we see that this is indeed the case. After performing the stepwise regression for both models, we see that povertyPercent is not an important variable for the incidence model. Therefore, we decided to only keep it in our death model.
 
 We see that PctHS25_Over and PctUnemployed16_Over are the only two educational variables that remain in the model after performing stepwise regression. We believe this is due to the fact that the other two variables are more positive or on the side of a higher level of education. Therefore the more educated one is, the easier it is for one to take preventative measures. Under this assumption, it becomes more clear that having a lower level of education results in a higher impact on our incidence model. Another reason is that if we assume an “incident” of lung cancer is reported right after someone is diagnosed with lung cancer, then the age range of our variable will have very low numbers of incidents. The same reasoning applies to our death model. We noticed that PctEmployed16_Over has a high p-value of 0.9061 here. Most people are diagnosed with lung cancer at around age 70, and so death happens later on. If we let the age range for PctEmployed16_Over be from 16-40, it is still very young compared to 70 years old. Therefore, this variable doesn’t affect our death model. While the same logic could apply for PctUnemployment16_Over, we believe that this does have an impact on our death model because this variable already represents a situation that is not as diserable.
 
