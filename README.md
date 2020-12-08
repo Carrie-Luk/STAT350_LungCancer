@@ -128,7 +128,7 @@ Similarly with our full death model we see that:
 
 Normal Q-Q            |  Residuals vs. Fitted
 :-------------------------:|:-------------------------:
- | 
+![Full Death - Normality](https://user-images.githubusercontent.com/58491399/101427023-f58e2600-38b2-11eb-9abb-adede829b521.png) | 
 
 > Click on the plots to expand the picture 
 
