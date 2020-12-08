@@ -107,7 +107,7 @@ Now that we had fitted our model and identified any influential points, dealing 
 
 ## Results 
 
-We will start by assessing our residual plots of our full incidence model to assure that our constant variance assumption and normality assumptions are being met. 
+We started by assessing our residual plots of our full incidence model to assure that our constant variance assumption and normality assumptions were met. 
 
 Normal Q-Q            |  Residuals vs. Fitted
 :-------------------------:|:-------------------------:
