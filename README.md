@@ -1,4 +1,5 @@
-![Facebook Video Cover 1702x630 px](https://user-images.githubusercontent.com/58491399/101436532-34c47300-38c3-11eb-839c-09179cd8db9f.jpeg)
+![Facebook Cover 851x315 px (1)](https://user-images.githubusercontent.com/58491399/101436954-07c49000-38c4-11eb-91c6-5ee0c0e17e29.jpeg)
+
 
 ## Index
 **1.** [Abstract](https://github.com/shernatasha/projects/blob/master/README.md#abstract) \
