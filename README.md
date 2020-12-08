@@ -1,5 +1,4 @@
-![Facebook Cover 851x315 px (1)](https://user-images.githubusercontent.com/58491399/101436954-07c49000-38c4-11eb-91c6-5ee0c0e17e29.jpeg)
-
+![Facebook Cover 851x315 px (2)](https://user-images.githubusercontent.com/58491399/101442228-bde1a700-38cf-11eb-90dd-724620f00c7a.jpeg)
 
 ## Index
 **1.** [Abstract](https://github.com/shernatasha/projects/blob/master/README.md#abstract) \
