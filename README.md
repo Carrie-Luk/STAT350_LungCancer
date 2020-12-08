@@ -124,6 +124,17 @@ Normal Q-Q            |  Residuals vs. Fitted
 
 We see from the Normal Q-Q plot that  the residuals do adequately meet the normality assumption. The deviation on the left side of the plot suggests a slight negative skew to the distribution of the residuals but they are not large enough to be of concern. We also see a few points on the right side of the graph which could be potential influential points or of high leverage. We will look closer at these after our variable selection to see if they still may be of concern. Next we see in our Residuals vs. Fitted plot that our model seems to be adequate to the linear relationship assumption. We have a very even distribution of points around zero which is a good sign of evenly distributed residuals. Though we see our data is slightly to the right of the graph, since it is not an obvious deviation we will not read too much into it. If we had a few more data points whose fitted values were less than 450, we would see the variation even out. Similarly we analyzed the Scale - Location plot and again saw a similar outcome to the Residuals vs. Fitted plot where we had points evenly distributed about the horizontal line with a slight skew to the right of the graph. Thus this plot confirms that our constant variance assumption is met. Lastly, the Residuals vs. Leverage plot showed that we did not have any high leverage points to be concerned about. 
 
+Similarly with our full death model we see that:
+
+Normal Q-Q            |  Residuals vs. Fitted
+:-------------------------:|:-------------------------:
+ | 
+
+> Click on the plots to expand the picture 
+
+**Figure 3: Residual Analysis of Full Death Model**
+
+Our Normal Q-Q plot has some slight deviations than the incidence model but this could be due to our death data containing more extreme values then our incidence data. Overall the plot looks to be lightly tailed as the majority of the data fits normally for the most part except for a few observations which may be potential influences. Then looking at the Residuals vs.  Fitted plot we see a very even spread of data with a few extra points on the right side, but nothing to be worried about. We have our data evenly spread about the zero line which shows that the linear relationship assumption has been met. We see the same three observations singled out on both the Normal Q-Q and Residuals vs. Fitted plots meaning that it will be important to take a closer look at these. Next, we analyzed the Scale-Location plot and again saw our points evenly distributed among the horizontal line which confirms that our constant variance assumption has been met. Lastly we saw on our Residuals vs. Leverage Plot that there are no high leverage points to be concerned about. 
 
 ## Conclusion 
 Starting off with avgAnnCount, we see it has more effect on the incidence model which makes sense since this variable is the number of reported cases annually. However, the variable medIncome affects the death model a lot more than the other. The reason for this is presumably because treatment for cancer costs more than a diagnosis. Therefore, one’s income level has a more important role in life or death.
