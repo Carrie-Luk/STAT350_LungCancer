@@ -167,7 +167,7 @@ Next we choose to evaluate whether our models have any influential or high lever
 
 Death Model Summary       |  Incidence Model Summary
 :-------------------------:|:-------------------------:
-![deathmodel](https://user-images.githubusercontent.com/58402986/101448337-b1fbe200-38db-11eb-8ebd-db7790ae84a0.png) | ![rsz_incidencemodel](https://user-images.githubusercontent.com/58402986/101449252-474ba600-38dd-11eb-8d64-6a2c61309ed1.png)
+![deathmodel](https://user-images.githubusercontent.com/58402986/101448337-b1fbe200-38db-11eb-8ebd-db7790ae84a0.png) | ![incidencemodel](https://user-images.githubusercontent.com/58402986/101450106-d4dbc580-38de-11eb-9d5e-f471f8d20b21.png)
 
 **Figure 6: Death and Incidence Model Summary**
 
