@@ -155,19 +155,19 @@ Starting with the county with the highest incidence rate, the top three are:
 - Powell County, Kentucky
 
 The counties with the lowest incidence rate are:
-Hudspeth County, Texas
-Presidio County, Texas
-Aleutians West Census Area, Alaska
+- Hudspeth County, Texas
+- Presidio County, Texas
+- Aleutians West Census Area, Alaska
 
 The counties with the highest death rate are:
-Woodson County, Kansas
-Madison County, Mississippi
-Powell County, Kentucky
+- Woodson County, Kansas
+- Madison County, Mississippi
+- Powell County, Kentucky
 
 The counties with the lowest death rate are:
-Eagle County, Colorado
-Presidio County, Texas
-Pitkin County, Colorado
+- Eagle County, Colorado
+- Presidio County, Texas
+- Pitkin County, Colorado
 
 An interesting observation is that Aleutians West Census Area has a very low poverty percentage, which is also correlated with the high median income which we do see. Our data analysis implied that it is likely for the county to have a low incidence rate if the citizens have the resources to keep themselves healthy. However, the same could go for the other end of the spectrum: having the resources to be unhealthy, which could explain why counties with high incidence rates also have a high median income.
 
