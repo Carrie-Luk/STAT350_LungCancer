@@ -173,8 +173,7 @@ This is the summary of our death and incidence model after performing stepwise r
 
 ![highestincidencerate](https://user-images.githubusercontent.com/58402986/101435758-c03d0480-38c1-11eb-86c6-7713a9750c9f.jpg)
 
-**Figure 7: Top 3 Counties with the Highest Incidence Rate**
-
+**Figure 7: Top 3 Counties with the Highest Incidence Rate** &nbsp;
 
 ![lowestincidencerate](https://user-images.githubusercontent.com/58402986/101436959-0a26ea00-38c4-11eb-9d82-51663c512a17.jpg)
 
