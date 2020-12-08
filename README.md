@@ -116,7 +116,8 @@ We will start by assessing our residual plots of our full incidence model to ass
 
 Normal Q-Q            |  Residuals vs. Fitted
 :-------------------------:|:-------------------------:
-![130775558_2820270421588786_8754615875456693759_n](https://user-images.githubusercontent.com/58491399/101423002-e2785780-38ac-11eb-8c9c-d6e547bd5814.png) | ![Death Model](https://user-images.githubusercontent.com/58491399/101408736-b1d6f480-3891-11eb-811f-54e29259696a.png)
+![130775558_2820270421588786_8754615875456693759_n](https://user-images.githubusercontent.com/58491399/101423002-e2785780-38ac-11eb-8c9c-d6e547bd5814.png) | ![129712940_712835399359695_2629368532734819007_n](https://user-images.githubusercontent.com/58491399/101423216-6b8f8e80-38ad-11eb-8b5c-fd14799d3b02.png)
+
 > Click on the plots to expand the picture 
 
 **Figure 2: Residual Analysis of Full Incidence Model**
