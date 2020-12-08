@@ -135,7 +135,27 @@ Normal Q-Q            |  Residuals vs. Fitted
 
 **Figure 3: Residual Analysis of Full Death Model**
 
-Our Normal Q-Q plot has some slight deviations than the incidence model but this could be due to our death data containing more extreme values then our incidence data. Overall the plot looks to be lightly tailed as the majority of the data fits normally for the most part except for a few observations which may be potential influences. Then looking at the Residuals vs.  Fitted plot we see a very even spread of data with a few extra points on the right side, but nothing to be worried about. We have our data evenly spread about the zero line which shows that the linear relationship assumption has been met. We see the same three observations singled out on both the Normal Q-Q and Residuals vs. Fitted plots meaning that it will be important to take a closer look at these. Next, we analyzed the Scale-Location plot and again saw our points evenly distributed among the horizontal line which confirms that our constant variance assumption has been met. Lastly we saw on our Residuals vs. Leverage Plot that there are no high leverage points to be concerned about. 
+Our Normal Q-Q plot has some slight deviations than the incidence model but this could be due to our death data containing more extreme values then our incidence data. Overall the plot looks to be lightly tailed as the majority of the data fits normally for the most part except for a few observations which may be potential influences. Then looking at the Residuals vs.  Fitted plot we see a very even spread of data with a few extra points on the right side, but nothing to be worried about. We have our data evenly spread about the zero line which shows that the linear relationship assumption has been met. We see the same three observations singled out on both the Normal Q-Q and Residuals vs. Fitted plots meaning that it will be important to take a closer look at these. Next, we analyzed the Scale-Location plot and again saw our points evenly distributed among the horizontal line which confirms that our constant variance assumption has been met. Lastly we saw on our Residuals vs. Leverage Plot that there are no high leverage points to be concerned about.
+
+Now that we have established that our model meets all the necessary multiple regression assumptions we will perform variable selection to try and find the best performing subset of regressors. As mentioned in the methods section of our report, we decided to use two different variable selection methods: stepwise regression and backward elimination. This was so we could compare the outcomes to see if there would be the possibility of two different fitting models. After compiling both of our codes our result was that both methods of variable selection gave us the exact model. For our death model we ended up with the following equation: 
+
+*** 
+
+And for our incidence model we had the following: 
+***
+
+We can see with these newly fitted models that before performing any hypothesis tests and looking for significant predictors there are already some differences in predictors for both of our models. Though we see many similarities between the two our incidence model seems to focus more on race than the death model. We will take a closer look at the predictors once we reassess the residual analysis for both models. Once we replotted our residual plots for both the new death and incidence model we saw that there were no significant changes in the plots and found that removing some predictors still kept our normality and linear regression assumptions the same. Therefore we moved on to checking for any multicollinearity in these new models.
+
+We decided to use a correlation matrix to first visualize any presence of multicollinearity before computing our variance inflation factors. 
+***
+
+From these visualizations we can see that our death model has some high correlation coefficients which should be investigated whereas we do not see anything too alarming in our incidence model. We took a look at the variance inflation factors of our death model to further investigate these high coefficient values. 
+***
+
+We see here that as we expected there are some very high VIFs that we would have expected to see based on our correlation matrices. The variables avgDeathsPerYear and popEst2015 have VIFs quite larger than 10 which makes them serious indicators of multicollinearity. Therefore to increase the validity of our prediction equation and also decrease the sensitivity of our regression coefficients. We see that avgAnnCount does have a VIF on the higher end of the spectrum but because we know death rate and avgAnnCount are expected to have a high correlation we choose to leave it in the model.
+
+Next we choose to evaluate whether our models have any influential or high leverage points which are of concern. We saw in our residual plots that there were some points which had been identified as potential influences, here we will examine them closer. 
+
 
 ![incidencemodel](https://user-images.githubusercontent.com/58402986/101447748-ab209f80-38da-11eb-9876-2b3775871ec0.png)
 
