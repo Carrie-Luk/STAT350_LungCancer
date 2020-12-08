@@ -139,7 +139,7 @@ Our Normal Q-Q plot has some slight deviations than the incidence model but this
 
 ![incidencemodel](https://user-images.githubusercontent.com/58402986/101447748-ab209f80-38da-11eb-9876-2b3775871ec0.png)
 
-**Figure 4: Incidence Model Summary **
+**Figure 4: Incidence Model Summary**
 
 This is the summary of our incidence model after performing stepwise regression. We have two variables that are not included here which are PctBachDeg25_Over and PctEmployed16_Over. Their respective p-values in the full model summary are: 0.45089 and 0.99955.
 
