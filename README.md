@@ -143,6 +143,10 @@ Our Normal Q-Q plot has some slight deviations than the incidence model but this
 
 This is the summary of our incidence model after performing stepwise regression. We have two variables that are not included here which are PctBachDeg25_Over and PctEmployed16_Over. Their respective p-values in the full model summary are: 0.45089 and 0.99955.
 
+![deathmodel](https://user-images.githubusercontent.com/58402986/101448337-b1fbe200-38db-11eb-8ebd-db7790ae84a0.png)
+
+**Figure 5: Death Model Summary**
+
 ![highestincidencerate](https://user-images.githubusercontent.com/58402986/101435758-c03d0480-38c1-11eb-86c6-7713a9750c9f.jpg)
 
 **Figure 6: Top 3 Counties with the Highest Incidence Rate**
