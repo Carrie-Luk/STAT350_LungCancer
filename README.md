@@ -139,7 +139,7 @@ Our Normal Q-Q plot has some slight deviations than the incidence model but this
 
 Now that we have established that our model meets all the necessary multiple regression assumptions we will perform variable selection to try and find the best performing subset of regressors. As mentioned in the methods section of our report, we decided to use two different variable selection methods: stepwise regression and backward elimination. This was so we could compare the outcomes to see if there would be the possibility of two different fitting models. After compiling both of our codes our result was that both methods of variable selection gave us the exact model. For our death model we ended up with the following equation: 
 
-*** 
+![DeathModel](https://user-images.githubusercontent.com/58491399/101448907-b1b01680-38dc-11eb-925f-6a4785df715d.png)
 
 And for our incidence model we had the following: 
 ***
