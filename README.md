@@ -168,7 +168,7 @@ Death Model Leverage       |  Incidence Model Leverage
 
 **Figure 6: Death and Incidence Model Leverage Code**
 
-The figure above shows our code for finding the influential points. Upon further investigation of these points, most of these points either have a really low or high incidence/death rate. For example, Hudspeth County has a really low incidence rate of 214.8, which is also the county with the third lowest incidence rate. While it does also have a low population estimate of 3379, this number is still in the 105th place from the bottom up in terms of the population. This means that the 104 counties with a lower population number. If we take 104 minus the two counties that have a lower incidence rate than Hudspeth, we are left with 102 counties that not only have a lower population but also have a higher incidence rate.
+The figure above shows our code for finding the influential points. Upon further investigation of these points, most of them either have a really low or high incidence/death rate. For example, Hudspeth County has a really low incidence rate of 214.8, which is also the county with the third lowest incidence rate. While it does also have a low population estimate of 3379, this number is still in the 105th place from the bottom up in terms of the population. This means that there are 104 counties with a lower population number. If we take 104 minus the two counties that have a lower incidence rate than Hudspeth, we are left with 102 counties that not only have a lower population but also have a higher incidence rate. This we believe that the influential points we have found above follow through with our study.
 
 ## Conclusion 
 
