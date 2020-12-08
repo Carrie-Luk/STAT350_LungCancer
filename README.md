@@ -1,4 +1,4 @@
-![Large Rectangle 336x280 px](https://user-images.githubusercontent.com/58491399/101435811-d3e86b00-38c1-11eb-9adf-cfaf5325e523.jpeg)
+![Cancer Graphic](https://user-images.githubusercontent.com/58491399/101261025-d93e8d80-36e8-11eb-9fce-ff649b77174c.jpeg)
 
 ## Index
 **1.** [Abstract](https://github.com/shernatasha/projects/blob/master/README.md#abstract) \
@@ -136,6 +136,8 @@ Normal Q-Q            |  Residuals vs. Fitted
 **Figure 3: Residual Analysis of Full Death Model**
 
 Our Normal Q-Q plot has some slight deviations than the incidence model but this could be due to our death data containing more extreme values then our incidence data. Overall the plot looks to be lightly tailed as the majority of the data fits normally for the most part except for a few observations which may be potential influences. Then looking at the Residuals vs.  Fitted plot we see a very even spread of data with a few extra points on the right side, but nothing to be worried about. We have our data evenly spread about the zero line which shows that the linear relationship assumption has been met. We see the same three observations singled out on both the Normal Q-Q and Residuals vs. Fitted plots meaning that it will be important to take a closer look at these. Next, we analyzed the Scale-Location plot and again saw our points evenly distributed among the horizontal line which confirms that our constant variance assumption has been met. Lastly we saw on our Residuals vs. Leverage Plot that there are no high leverage points to be concerned about. 
+
+![highestincidencerate](https://user-images.githubusercontent.com/58402986/101435758-c03d0480-38c1-11eb-86c6-7713a9750c9f.jpg)
 
 ## Conclusion 
 Starting off with avgAnnCount, we see it has more effect on the incidence model which makes sense since this variable is the number of reported cases annually. However, the variable medIncome affects the death model a lot more than the other. The reason for this is presumably because treatment for cancer costs more than a diagnosis. Therefore, one’s income level has a more important role in life or death.
