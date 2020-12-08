@@ -1,4 +1,4 @@
-![YouTube Thumbnail 1280x720 px](https://user-images.githubusercontent.com/58491399/101435964-1f9b1480-38c2-11eb-875c-edb9717fbac3.jpeg)
+![Facebook Cover 851x315 px](https://user-images.githubusercontent.com/58491399/101436202-8ddfd700-38c2-11eb-8c15-1265740b84f2.jpeg)
 
 ## Index
 **1.** [Abstract](https://github.com/shernatasha/projects/blob/master/README.md#abstract) \
