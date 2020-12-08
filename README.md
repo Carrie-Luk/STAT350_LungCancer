@@ -152,8 +152,7 @@ We decided to use a correlation matrix to first visualize any presence of multic
 
 Death Model            |  Incidence Model
 :-------------------------:|:-------------------------:
-![Screenshot (1584)](https://user-images.githubusercontent.com/58491399/101449205-3438d600-38dd-11eb-8ec1-1bf13d3c5abd.png) | 
-
+![Screenshot (1584)](https://user-images.githubusercontent.com/58491399/101449205-3438d600-38dd-11eb-8ec1-1bf13d3c5abd.png) | ![Screenshot (1585)](https://user-images.githubusercontent.com/58491399/101449306-634f4780-38dd-11eb-9a16-4d0980c1f3e8.png)
 
 From these visualizations we can see that our death model has some high correlation coefficients which should be investigated whereas we do not see anything too alarming in our incidence model. We took a look at the variance inflation factors of our death model to further investigate these high coefficient values. 
 ***
