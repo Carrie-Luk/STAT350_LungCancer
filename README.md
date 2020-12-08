@@ -174,8 +174,8 @@ This is the summary of our death and incidence model after performing stepwise r
 
 Death Model Leverage       |  Incidence Model Leverage
 :-------------------------:|:-------------------------:
-
 <img width="613" alt="deathleverage" src="https://user-images.githubusercontent.com/58402986/101455296-343dd380-38e7-11eb-8c2a-0cf066f91ab9.PNG"> | <img width="834" alt="incidenceleverage" src="https://user-images.githubusercontent.com/58402986/101455433-7109ca80-38e7-11eb-9f12-b18ad5bbc399.PNG">
+> Click on the image to expand the picture 
 
 **Figure 7: Death and Incidence Model Leverage Code**
 
