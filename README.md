@@ -172,7 +172,7 @@ Death Model Summary       |  Incidence Model Summary
 This is the summary of our death and incidence model after performing stepwise regression. For our death model, we have five variables that are not included here which are medIncome, MedianAge, PctEmployed16_Over, PctBlack, and PctAsian. Their respective p-values in the full model summary are: 0.51256, 0.94536, 0.74515, 0.14333, 0.68229. For our incidence model, we have two variables that are not included here which are PctBachDeg25_Over and PctEmployed16_Over. Their respective p-values in the full model summary are: 0.45089 and 0.99955.
 
 
-Death Model Leverage     |  Incidence Model Leverage
+Death Model Leverage       |  Incidence Model Leverage
 :-------------------------:|:-------------------------:
 
 <img width="613" alt="deathleverage" src="https://user-images.githubusercontent.com/58402986/101455296-343dd380-38e7-11eb-8c2a-0cf066f91ab9.PNG"> | <img width="834" alt="incidenceleverage" src="https://user-images.githubusercontent.com/58402986/101455433-7109ca80-38e7-11eb-9f12-b18ad5bbc399.PNG">
