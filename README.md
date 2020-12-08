@@ -161,25 +161,24 @@ We see here that as we expected there are some very high VIFs that we would have
 
 Next we choose to evaluate whether our models have any influential or high leverage points which are of concern. We saw in our residual plots that there were some points which had been identified as potential influences, here we will examine them closer. 
 
+Death Model Leverage       |  Incidence Model Leverage
+:-------------------------:|:-------------------------:
+<img width="613" alt="deathleverage" src="https://user-images.githubusercontent.com/58402986/101455296-343dd380-38e7-11eb-8c2a-0cf066f91ab9.PNG"> | <img width="665" alt="incidenceleverage" src="https://user-images.githubusercontent.com/58402986/101456098-64d23d00-38e8-11eb-950c-f71fb51eec9a.PNG">
+> Click on the image to expand the picture 
+
+**Figure 6: Death and Incidence Model Leverage Code**
+
+## Conclusion 
 
 Death Model Summary       |  Incidence Model Summary
 :-------------------------:|:-------------------------:
 ![deathmodel](https://user-images.githubusercontent.com/58402986/101448337-b1fbe200-38db-11eb-8ebd-db7790ae84a0.png) | ![incidencemodel](https://user-images.githubusercontent.com/58402986/101450106-d4dbc580-38de-11eb-9d5e-f471f8d20b21.png)
 > Click on the image to expand the picture 
 
-**Figure 6: Death and Incidence Model Summary**
+**Figure 7: Death and Incidence Model Summary**
 
 This is the summary of our death and incidence model after performing stepwise regression. For our death model, we have five variables that are not included here which are medIncome, MedianAge, PctEmployed16_Over, PctBlack, and PctAsian. Their respective p-values in the full model summary are: 0.51256, 0.94536, 0.74515, 0.14333, 0.68229. For our incidence model, we have two variables that are not included here which are PctBachDeg25_Over and PctEmployed16_Over. Their respective p-values in the full model summary are: 0.45089 and 0.99955.
 
-
-Death Model Leverage       |  Incidence Model Leverage
-:-------------------------:|:-------------------------:
-<img width="613" alt="deathleverage" src="https://user-images.githubusercontent.com/58402986/101455296-343dd380-38e7-11eb-8c2a-0cf066f91ab9.PNG"> | <img width="665" alt="incidenceleverage" src="https://user-images.githubusercontent.com/58402986/101456098-64d23d00-38e8-11eb-950c-f71fb51eec9a.PNG">
-> Click on the image to expand the picture 
-
-**Figure 7: Death and Incidence Model Leverage Code**
-
-## Conclusion 
 To address our questions of interest, we will go through several of the variables and discuss the impact it has on our models. Starting off with avgAnnCount, we see it has more effect on the incidence model which makes sense since this variable is the number of reported cases annually. However, the variable medIncome affects the death model a lot more than the other. The reason for this is presumably because treatment for cancer costs more than a diagnosis. Therefore, one’s income level has a more important role in life or death. As we have mentioned previously, one of our expectations was for povertyPercent to affect the death model more, and we see that this is indeed the case. After performing the stepwise regression for both models, we see that povertyPercent is not an important variable for the incidence model. Therefore, we decided to only keep it in our death model.
 
 We see that PctHS25_Over and PctUnemployed16_Over are the only two educational variables that remain in the model after performing stepwise regression. We believe this is due to the fact that the other two variables are more positive or on the side of a higher level of education. Therefore the more educated one is, the easier it is for one to take preventative measures. Under this assumption, it becomes more clear that having a lower level of education results in a higher impact on our incidence model. Another reason is that if we assume an “incident” of lung cancer is reported right after someone is diagnosed with lung cancer, then the age range of our variable will have very low numbers of incidents. The same reasoning applies to our death model. We noticed that PctEmployed16_Over has a high p-value of 0.9061 here. Most people are diagnosed with lung cancer at around age 70, and so death happens later on. If we let the age range for PctEmployed16_Over be from 16-40, it is still very young compared to 70 years old. Therefore, this variable doesn’t affect our death model. While the same logic could apply for PctUnemployment16_Over, we believe that this does have an impact on our death model because this variable already represents a situation that is not as diserable.
