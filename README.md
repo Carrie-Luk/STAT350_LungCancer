@@ -111,6 +111,16 @@ Finally, the last step in our investigation regarding which factors are more sig
 
 
 ## Results 
+
+We will start by assessing our residual plots of our full incidence model to assure that our constant variance assumption and normality assumptions are being met. 
+
+Normal Q-Q            |  Residuals vs. Fitted
+:-------------------------:|:-------------------------:
+![130775558_2820270421588786_8754615875456693759_n](https://user-images.githubusercontent.com/58491399/101423002-e2785780-38ac-11eb-8c9c-d6e547bd5814.png) | ![Death Model](https://user-images.githubusercontent.com/58491399/101408736-b1d6f480-3891-11eb-811f-54e29259696a.png)
+> Click on the plots to expand the picture 
+
+**Figure 2: Residual Analysis of Full Incidence Model**
+
 ## Conclusion 
 Starting off with avgAnnCount, we see it has more effect on the incidence model which makes sense since this variable is the number of reported cases annually. However, the variable medIncome affects the death model a lot more than the other. The reason for this is presumably because treatment for cancer costs more than a diagnosis. Therefore, one’s income level has a more important role in life or death.
 
