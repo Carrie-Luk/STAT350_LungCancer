@@ -150,9 +150,9 @@ Why are Asians not included in the incidence model? They are included when I do 
 
 To further support the effect of the variables we have mentioned, we will answer the second question by looking at our sorted data and listing out the counties:
 Starting with the county with the highest incidence rate, the top three are:
-Williamsburg City, Virginia
-Charlottesville city, Virginia
-Powell County, Kentucky
+- Williamsburg City, Virginia
+- Charlottesville city, Virginia
+- Powell County, Kentucky
 
 The counties with the lowest incidence rate are:
 Hudspeth County, Texas
