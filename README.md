@@ -155,7 +155,6 @@ Death Model            |  Incidence Model
 **Figure 5: Correlation Matrices for Both Models**
 
 From these visualizations we can see that our death model has some high correlation coefficients which should be investigated whereas we do not see anything too alarming in our incidence model. We took a look at the variance inflation factors of our death model to further investigate these high coefficient values. 
-***
 
 We see here that as we expected there are some very high VIFs that we would have expected to see based on our correlation matrices. The variables avgDeathsPerYear and popEst2015 have VIFs quite larger than 10 which makes them serious indicators of multicollinearity. Therefore to increase the validity of our prediction equation and also decrease the sensitivity of our regression coefficients. We see that avgAnnCount does have a VIF on the higher end of the spectrum but because we know death rate and avgAnnCount are expected to have a high correlation we choose to leave it in the model.
 
