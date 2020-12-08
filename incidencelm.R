@@ -79,6 +79,10 @@ outlierTest(incd_new)
 #Normal Q-Q plot, line is not best fit
 #Scale location plot, line is also slanting downwards
 
+#correlation plot
+corrplot(cor(cancer_new), type = "upper", tl.cex = 0.75, tl.col="black")
+mtext(line = 0, cex = 1, 'Matrix Correlations for Incidence Model')
+
 #checking for large vif
 vif(incd_new)
 
