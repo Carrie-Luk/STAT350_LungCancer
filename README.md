@@ -137,21 +137,27 @@ Normal Q-Q            |  Residuals vs. Fitted
 
 Our Normal Q-Q plot has some slight deviations than the incidence model but this could be due to our death data containing more extreme values then our incidence data. Overall the plot looks to be lightly tailed as the majority of the data fits normally for the most part except for a few observations which may be potential influences. Then looking at the Residuals vs.  Fitted plot we see a very even spread of data with a few extra points on the right side, but nothing to be worried about. We have our data evenly spread about the zero line which shows that the linear relationship assumption has been met. We see the same three observations singled out on both the Normal Q-Q and Residuals vs. Fitted plots meaning that it will be important to take a closer look at these. Next, we analyzed the Scale-Location plot and again saw our points evenly distributed among the horizontal line which confirms that our constant variance assumption has been met. Lastly we saw on our Residuals vs. Leverage Plot that there are no high leverage points to be concerned about. 
 
+![incidencemodel](https://user-images.githubusercontent.com/58402986/101447748-ab209f80-38da-11eb-9876-2b3775871ec0.png)
+
+**Figure 4: Incidence Model Summary **
+
+This is the summary of our incidence model after performing stepwise regression. We have two variables that are not included here which are PctBachDeg25_Over and PctEmployed16_Over. Their respective p-values in the full model summary are: 0.45089 and 0.99955.
+
 ![highestincidencerate](https://user-images.githubusercontent.com/58402986/101435758-c03d0480-38c1-11eb-86c6-7713a9750c9f.jpg)
 
-**Figure 4: Top 3 Counties with the Highest Incidence Rate**
+**Figure 6: Top 3 Counties with the Highest Incidence Rate**
 
 ![lowestincidencerate](https://user-images.githubusercontent.com/58402986/101436959-0a26ea00-38c4-11eb-9d82-51663c512a17.jpg)
 
-**Figure 5: Bottom 3 Counties with the Lowest Incidence Rate**
+**Figure 7: Bottom 3 Counties with the Lowest Incidence Rate**
 
 ![highestdeathrate](https://user-images.githubusercontent.com/58402986/101437038-37739800-38c4-11eb-8c25-3b4bf56a70f7.jpg)
 
-**Figure 6: Top 3 Counties with the Highest Death Rate**
+**Figure 8: Top 3 Counties with the Highest Death Rate**
 
 ![lowestdeathrate](https://user-images.githubusercontent.com/58402986/101437096-52460c80-38c4-11eb-8bc8-129116adf3e9.jpg)
 
-**Figure 7: Bottom 3 Counties with the Lowest Death Rate**
+**Figure 9: Bottom 3 Counties with the Lowest Death Rate**
 
 ## Conclusion 
 To address our questions of interest, we will go through several of the variables and discuss the impact it has on our models. Starting off with avgAnnCount, we see it has more effect on the incidence model which makes sense since this variable is the number of reported cases annually. However, the variable medIncome affects the death model a lot more than the other. The reason for this is presumably because treatment for cancer costs more than a diagnosis. Therefore, one’s income level has a more important role in life or death. As we have mentioned previously, one of our expectations was for povertyPercent to affect the death model more, and we see that this is indeed the case. After performing the stepwise regression for both models, we see that povertyPercent is not an important variable for the incidence model. Therefore, we decided to only keep it in our death model.
