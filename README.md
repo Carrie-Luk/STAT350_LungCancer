@@ -219,3 +219,9 @@ We have concluded that people with higher education, higher income, and are with
 
 ## Appendix 
 
+1. Our R code is listed in two seperate files on our repository:
+        - deathlm.R contains our code for the death model which we computed
+        - incidencelm.R contains our code for the incidence model which we computed
+2. The dataset we used to conduct our analysis can be found saved on our page as the cancer_reg.csv file
+        - As mentioned in the data description of our report we did not use everything within this dataset
+        - We also did not create this file, this data set was found at the following link: [OLS Regression Challenge](https://data.world/nrippner/ols-regression-challenge)        
