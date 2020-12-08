@@ -165,7 +165,7 @@ Next we choose to evaluate whether our models have any influential or high lever
 
 Death Model Leverage       |  Incidence Model Leverage
 :-------------------------:|:-------------------------:
-<img width="613" alt="deathleverage" src="https://user-images.githubusercontent.com/58402986/101455296-343dd380-38e7-11eb-8c2a-0cf066f91ab9.PNG"> | <img width="665" alt="incidenceleverage" src="https://user-images.githubusercontent.com/58402986/101456098-64d23d00-38e8-11eb-950c-f71fb51eec9a.PNG">
+<img width="649" alt="deathleverage" src="https://user-images.githubusercontent.com/58402986/101543432-1315cb00-3959-11eb-90e1-0f086af8ac76.PNG"> | <img width="663" alt="incidenceleverage" src="https://user-images.githubusercontent.com/58402986/101543360-faa5b080-3958-11eb-8b34-b0ecb34a186b.PNG">
 > Click on the image to expand the picture 
 
 **Figure 7: Death and Incidence Model Leverage Code**
