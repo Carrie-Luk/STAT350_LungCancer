@@ -103,12 +103,9 @@ Once we had identified our influential observations we needed to take a closer l
 
 Now that we had fitted our model and identified any influential points, dealing with them however we decided to, we took a look at the summary of our models and began performing our analysis. Here, we did a residual analysis on our now completed models, took a look at the summary statistics and interpreted values such as our adjusted R<sup>2</sup> to see how well we fit the model, the residual standard error to assess the quality of our fit, and of course conducted a hypothesis test to see if there is a significant linear relationship between at least one of the predictors and the response. 
 
-Then, once we had assessed our summary one of the last steps we would like to conduct is model validation. Before we interpreted our findings and began to answer our questions about the data we assessed the validity of the model. This is to not only ensure that we as the creators had created a model which would accurately operate in our analysis but also be useful for others to conduct their own analysis’. We chose to perform model validation by studying the regression coefficients and determining whether their signs and magnitudes are reasonable as well as investigating the prediction performance of the model. Since we are unable to collect new data for our dataset we decided to perform model validation by cross validation. In cross validation we split our data into two sets, an estimation set and a prediction data. We use the estimation set to build our regression model and our prediction set to study the predictability of the estimation set. …..
-
-...add explanation of how validation was performed
+Then, once we had assessed our summary, one of the last steps we would like to conduct is model validation. Before we interpreted our findings and began to answer our questions about the data we assessed the validity of the model. This is to not only ensure that we as the creators had created a model which would accurately operate in our analysis but also be useful for others to conduct their own analysis’. Since we are unable to collect new data for our dataset we decided to perform model validation by cross validation. Here we split our data into two sets, one for estimating and the other for predicting. We use the estimating set to build our regression model and our prediction set to assess the predictability of the estimation set. To test how well our estimation set predicts values we compute the R<sup>2</sup>, the root mean square prediction error (RMSPE) and the mean absolute prediction error (MAPE). We know the R<sup>2</sup> tells us how well the model fits, the RMSPE tells us how spread out our residuals are and the MAPE tells us how accurate our predictions are. 
 
 Finally, the last step in our investigation regarding which factors are more significant to death than incidence would be to interpret our findings. Now that we had fitted our model, found any influential points, analyzed signs of multicollinearity and done all else to ensure we have the best performing models for our project we can take a look at our findings and be able to answer our questions regarding this dataset. 
-
 
 ## Results 
 
@@ -175,20 +172,22 @@ Death Model Summary       |  Incidence Model Summary
 This is the summary of our death and incidence model after performing stepwise regression. For our death model, we have five variables that are not included here which are medIncome, MedianAge, PctEmployed16_Over, PctBlack, and PctAsian. Their respective p-values in the full model summary are: 0.51256, 0.94536, 0.74515, 0.14333, 0.68229. For our incidence model, we have two variables that are not included here which are PctBachDeg25_Over and PctEmployed16_Over. Their respective p-values in the full model summary are: 0.45089 and 0.99955.
 
 ![highestincidencerate](https://user-images.githubusercontent.com/58402986/101435758-c03d0480-38c1-11eb-86c6-7713a9750c9f.jpg)
+
 **Figure 7: Top 3 Counties with the Highest Incidence Rate**
-&nbsp;
+
 
 ![lowestincidencerate](https://user-images.githubusercontent.com/58402986/101436959-0a26ea00-38c4-11eb-9d82-51663c512a17.jpg)
+
 **Figure 8: Bottom 3 Counties with the Lowest Incidence Rate**
 
 
-
 ![highestdeathrate](https://user-images.githubusercontent.com/58402986/101437038-37739800-38c4-11eb-8c25-3b4bf56a70f7.jpg)
+
 **Figure 9: Top 3 Counties with the Highest Death Rate**
 
 
-
 ![lowestdeathrate](https://user-images.githubusercontent.com/58402986/101437096-52460c80-38c4-11eb-8bc8-129116adf3e9.jpg)
+
 **Figure 10: Bottom 3 Counties with the Lowest Death Rate**
 
 ## Conclusion 
