@@ -165,7 +165,9 @@ We see here that as we expected there are some very high VIFs that we would have
 Next we choose to evaluate whether our models have any influential or high leverage points which are of concern. We saw in our residual plots that there were some points which had been identified as potential influences, here we will examine them closer. 
 
 
-![incidencemodel](https://user-images.githubusercontent.com/58402986/101447748-ab209f80-38da-11eb-9876-2b3775871ec0.png)
+Death Model Summary       |  Incidence Model Summary
+:-------------------------:|:-------------------------:
+![rsz_incidencemodel](https://user-images.githubusercontent.com/58402986/101449252-474ba600-38dd-11eb-8d64-6a2c61309ed1.png)
 
 **Figure 6: Incidence Model Summary**
 
