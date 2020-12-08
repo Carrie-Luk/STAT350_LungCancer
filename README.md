@@ -174,22 +174,21 @@ Death Model Summary       |  Incidence Model Summary
 This is the summary of our death and incidence model after performing stepwise regression. For our death model, we have five variables that are not included here which are medIncome, MedianAge, PctEmployed16_Over, PctBlack, and PctAsian. Their respective p-values in the full model summary are: 0.51256, 0.94536, 0.74515, 0.14333, 0.68229. For our incidence model, we have two variables that are not included here which are PctBachDeg25_Over and PctEmployed16_Over. Their respective p-values in the full model summary are: 0.45089 and 0.99955.
 
 ![highestincidencerate](https://user-images.githubusercontent.com/58402986/101435758-c03d0480-38c1-11eb-86c6-7713a9750c9f.jpg)
-
 **Figure 7: Top 3 Counties with the Highest Incidence Rate**
 
 
-![lowestincidencerate](https://user-images.githubusercontent.com/58402986/101436959-0a26ea00-38c4-11eb-9d82-51663c512a17.jpg)
 
+![lowestincidencerate](https://user-images.githubusercontent.com/58402986/101436959-0a26ea00-38c4-11eb-9d82-51663c512a17.jpg)
 **Figure 8: Bottom 3 Counties with the Lowest Incidence Rate**
 
 
-![highestdeathrate](https://user-images.githubusercontent.com/58402986/101437038-37739800-38c4-11eb-8c25-3b4bf56a70f7.jpg)
 
+![highestdeathrate](https://user-images.githubusercontent.com/58402986/101437038-37739800-38c4-11eb-8c25-3b4bf56a70f7.jpg)
 **Figure 9: Top 3 Counties with the Highest Death Rate**
 
 
-![lowestdeathrate](https://user-images.githubusercontent.com/58402986/101437096-52460c80-38c4-11eb-8bc8-129116adf3e9.jpg)
 
+![lowestdeathrate](https://user-images.githubusercontent.com/58402986/101437096-52460c80-38c4-11eb-8bc8-129116adf3e9.jpg)
 **Figure 10: Bottom 3 Counties with the Lowest Death Rate**
 
 ## Conclusion 
