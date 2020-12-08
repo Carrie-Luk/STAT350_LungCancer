@@ -156,6 +156,11 @@ Death Model            |  Incidence Model
 
 From these visualizations we can see that our death model has some high correlation coefficients which should be investigated whereas we do not see anything too alarming in our incidence model. We took a look at the variance inflation factors of our death model to further investigate these high coefficient values. 
 
+![VIFs](https://user-images.githubusercontent.com/58491399/101519627-43993d00-3938-11eb-8ba5-db1b39595c29.png)
+> Click on the image to expand the picture 
+
+**Figure 6: VIFs for Our Death Model**
+
 We see here that as we expected there are some very high VIFs that we would have expected to see based on our correlation matrices. The variables avgDeathsPerYear and popEst2015 have VIFs quite larger than 10 which makes them serious indicators of multicollinearity. Therefore to increase the validity of our prediction equation and also decrease the sensitivity of our regression coefficients. We see that avgAnnCount does have a VIF on the higher end of the spectrum but because we know death rate and avgAnnCount are expected to have a high correlation we choose to leave it in the model.
 
 Next we choose to evaluate whether our models have any influential or high leverage points which are of concern. We saw in our residual plots that there were some points which had been identified as potential influences, here we will examine them closer. 
@@ -165,7 +170,7 @@ Death Model Leverage       |  Incidence Model Leverage
 <img width="613" alt="deathleverage" src="https://user-images.githubusercontent.com/58402986/101455296-343dd380-38e7-11eb-8c2a-0cf066f91ab9.PNG"> | <img width="665" alt="incidenceleverage" src="https://user-images.githubusercontent.com/58402986/101456098-64d23d00-38e8-11eb-950c-f71fb51eec9a.PNG">
 > Click on the image to expand the picture 
 
-**Figure 6: Death and Incidence Model Leverage Code**
+**Figure 7: Death and Incidence Model Leverage Code**
 
 The figure above shows our code for finding the influential points. Upon further investigation of these points, most of them either have a really low or high incidence/death rate. For example, Hudspeth County has a really low incidence rate of 214.8, which is also the county with the third lowest incidence rate. While it does also have a low population estimate of 3379, this number is still in the 105th place from the bottom up in terms of the population. This means that there are 104 counties with a lower population number. If we take 104 minus the two counties that have a lower incidence rate than Hudspeth, we are left with 102 counties that not only have a lower population but also have a higher incidence rate. This we believe that the influential points we have found above follow through with our study.
 
@@ -176,7 +181,7 @@ Death Model Summary       |  Incidence Model Summary
 ![deathmodel](https://user-images.githubusercontent.com/58402986/101448337-b1fbe200-38db-11eb-8ebd-db7790ae84a0.png) | ![incidencemodel](https://user-images.githubusercontent.com/58402986/101450106-d4dbc580-38de-11eb-9d5e-f471f8d20b21.png)
 > Click on the image to expand the picture 
 
-**Figure 7: Death and Incidence Model Summary**
+**Figure 8: Death and Incidence Model Summary**
 
 This is the summary of our death and incidence model after performing stepwise regression. For our death model, we have five variables that are not included here which are medIncome, MedianAge, PctEmployed16_Over, PctBlack, and PctAsian. Their respective p-values in the full model summary are: 0.51256, 0.94536, 0.74515, 0.14333, 0.68229. For our incidence model, we have two variables that are not included here which are PctBachDeg25_Over and PctEmployed16_Over. Their respective p-values in the full model summary are: 0.45089 and 0.99955.
 
@@ -191,19 +196,19 @@ Why are Asians not included in the incidence model? They are included when I do 
 To further support the effect of the variables we have mentioned, we will answer the second question by looking at our sorted data:
 
 ![highestincidencerate](https://user-images.githubusercontent.com/58402986/101435758-c03d0480-38c1-11eb-86c6-7713a9750c9f.jpg)
-**Figure 8: Top 3 Counties with the Highest Incidence Rate** 
+**Figure 9: Top 3 Counties with the Highest Incidence Rate** 
 
 
 ![lowestincidencerate](https://user-images.githubusercontent.com/58402986/101436959-0a26ea00-38c4-11eb-9d82-51663c512a17.jpg)
-**Figure 9: Bottom 3 Counties with the Lowest Incidence Rate** 
+**Figure 10: Bottom 3 Counties with the Lowest Incidence Rate** 
 
 
 ![highestdeathrate](https://user-images.githubusercontent.com/58402986/101437038-37739800-38c4-11eb-8c25-3b4bf56a70f7.jpg)
-**Figure 10: Top 3 Counties with the Highest Death Rate** 
+**Figure 11: Top 3 Counties with the Highest Death Rate** 
 
 
 ![lowestdeathrate](https://user-images.githubusercontent.com/58402986/101437096-52460c80-38c4-11eb-8bc8-129116adf3e9.jpg)
-**Figure 11: Bottom 3 Counties with the Lowest Death Rate**
+**Figure 12: Bottom 3 Counties with the Lowest Death Rate**
 
 An interesting point is that Aleutians West Census Area has a very low poverty percentage, which is also correlated with the high median income which we do see. Our expectation was that it is more likely for the county to have a low incidence rate if the citizens have the resources to keep themselves healthy. However, the reasoning could apply for citizens having the resources to be unhealthy, or perhaps afford the diagnosis of lung cancer. This could explain why counties with high incidence rates also have a high median income.
 
