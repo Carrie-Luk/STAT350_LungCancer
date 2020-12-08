@@ -171,21 +171,6 @@ Death Model Summary       |  Incidence Model Summary
 
 This is the summary of our death and incidence model after performing stepwise regression. For our death model, we have five variables that are not included here which are medIncome, MedianAge, PctEmployed16_Over, PctBlack, and PctAsian. Their respective p-values in the full model summary are: 0.51256, 0.94536, 0.74515, 0.14333, 0.68229. For our incidence model, we have two variables that are not included here which are PctBachDeg25_Over and PctEmployed16_Over. Their respective p-values in the full model summary are: 0.45089 and 0.99955.
 
-![highestincidencerate](https://user-images.githubusercontent.com/58402986/101435758-c03d0480-38c1-11eb-86c6-7713a9750c9f.jpg)
-**Figure 7: Top 3 Counties with the Highest Incidence Rate** \
-
-
-![lowestincidencerate](https://user-images.githubusercontent.com/58402986/101436959-0a26ea00-38c4-11eb-9d82-51663c512a17.jpg)
-**Figure 8: Bottom 3 Counties with the Lowest Incidence Rate** \
-
-
-![highestdeathrate](https://user-images.githubusercontent.com/58402986/101437038-37739800-38c4-11eb-8c25-3b4bf56a70f7.jpg)
-**Figure 9: Top 3 Counties with the Highest Death Rate** \
-
-
-![lowestdeathrate](https://user-images.githubusercontent.com/58402986/101437096-52460c80-38c4-11eb-8bc8-129116adf3e9.jpg)
-**Figure 10: Bottom 3 Counties with the Lowest Death Rate** \
-
 ## Conclusion 
 To address our questions of interest, we will go through several of the variables and discuss the impact it has on our models. Starting off with avgAnnCount, we see it has more effect on the incidence model which makes sense since this variable is the number of reported cases annually. However, the variable medIncome affects the death model a lot more than the other. The reason for this is presumably because treatment for cancer costs more than a diagnosis. Therefore, one’s income level has a more important role in life or death. As we have mentioned previously, one of our expectations was for povertyPercent to affect the death model more, and we see that this is indeed the case. After performing the stepwise regression for both models, we see that povertyPercent is not an important variable for the incidence model. Therefore, we decided to only keep it in our death model.
 
@@ -194,6 +179,21 @@ We see that PctHS25_Over and PctUnemployed16_Over are the only two educational v
 Health care in the US is one of the reasons most people go bankrupt. This is because they don’t have universal health care and so citizens can either choose between private health care insurance of government funded insurance. While private health care is more expensive, it is also more flexible and so most Americans end up choosing this option. It is no surprise that private and public health care appears to affect both our incidence and death model. However, we do see that private health care affects our incidence model more since the p-value for the incidence model is lower than the death model. We believe that this is due to the fact that private health care coverage is better than public health coverage.
 
 Why are Asians not included in the incidence model? They are included when I do forward selection, however we notice that the adjusted R-Square for the forward selection and stepwise regression is the same whether we include PctAsians or not. Therefore we conclude that PctAsians does not have much of an impact on our incidence model. One reason for this could be the fact that the percentage of asians in the US is relatively small and looking at our given dataset, PctAsians has the highest number of zeros with 194 total. This could mean that PctAsian is more inaccurate compared to the other percentages or perhaps the numbers were so low it got rounded to 0. The reason PctWhite is not included in the death model is because if we do, it would lower the adjusted R square.
+
+![highestincidencerate](https://user-images.githubusercontent.com/58402986/101435758-c03d0480-38c1-11eb-86c6-7713a9750c9f.jpg)
+**Figure 7: Top 3 Counties with the Highest Incidence Rate** 
+
+
+![lowestincidencerate](https://user-images.githubusercontent.com/58402986/101436959-0a26ea00-38c4-11eb-9d82-51663c512a17.jpg)
+**Figure 8: Bottom 3 Counties with the Lowest Incidence Rate** 
+
+
+![highestdeathrate](https://user-images.githubusercontent.com/58402986/101437038-37739800-38c4-11eb-8c25-3b4bf56a70f7.jpg)
+**Figure 9: Top 3 Counties with the Highest Death Rate** 
+
+
+![lowestdeathrate](https://user-images.githubusercontent.com/58402986/101437096-52460c80-38c4-11eb-8bc8-129116adf3e9.jpg)
+**Figure 10: Bottom 3 Counties with the Lowest Death Rate**
 
 To further support the effect of the variables we have mentioned, we will answer the second question by looking at our sorted data and listing out the counties:
 Starting with the county with the highest incidence rate, the top three are:
