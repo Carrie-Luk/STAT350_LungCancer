@@ -175,7 +175,9 @@ This is the summary of our death and incidence model after performing stepwise r
 Death Model Leverage     |  Incidence Model Leverage
 :-------------------------:|:-------------------------:
 
-<img width="613" alt="deathleverage" src="https://user-images.githubusercontent.com/58402986/101455296-343dd380-38e7-11eb-8c2a-0cf066f91ab9.PNG"> |
+<img width="613" alt="deathleverage" src="https://user-images.githubusercontent.com/58402986/101455296-343dd380-38e7-11eb-8c2a-0cf066f91ab9.PNG"> | <img width="834" alt="incidenceleverage" src="https://user-images.githubusercontent.com/58402986/101455433-7109ca80-38e7-11eb-9f12-b18ad5bbc399.PNG">
+
+**Figure 7: Death and Incidence Model Leverage Code**
 
 ## Conclusion 
 To address our questions of interest, we will go through several of the variables and discuss the impact it has on our models. Starting off with avgAnnCount, we see it has more effect on the incidence model which makes sense since this variable is the number of reported cases annually. However, the variable medIncome affects the death model a lot more than the other. The reason for this is presumably because treatment for cancer costs more than a diagnosis. Therefore, one’s income level has a more important role in life or death. As we have mentioned previously, one of our expectations was for povertyPercent to affect the death model more, and we see that this is indeed the case. After performing the stepwise regression for both models, we see that povertyPercent is not an important variable for the incidence model. Therefore, we decided to only keep it in our death model.
@@ -189,19 +191,19 @@ Why are Asians not included in the incidence model? They are included when I do 
 To further support the effect of the variables we have mentioned, we will answer the second question by looking at our sorted data:
 
 ![highestincidencerate](https://user-images.githubusercontent.com/58402986/101435758-c03d0480-38c1-11eb-86c6-7713a9750c9f.jpg)
-**Figure 7: Top 3 Counties with the Highest Incidence Rate** 
+**Figure 8: Top 3 Counties with the Highest Incidence Rate** 
 
 
 ![lowestincidencerate](https://user-images.githubusercontent.com/58402986/101436959-0a26ea00-38c4-11eb-9d82-51663c512a17.jpg)
-**Figure 8: Bottom 3 Counties with the Lowest Incidence Rate** 
+**Figure 9: Bottom 3 Counties with the Lowest Incidence Rate** 
 
 
 ![highestdeathrate](https://user-images.githubusercontent.com/58402986/101437038-37739800-38c4-11eb-8c25-3b4bf56a70f7.jpg)
-**Figure 9: Top 3 Counties with the Highest Death Rate** 
+**Figure 10: Top 3 Counties with the Highest Death Rate** 
 
 
 ![lowestdeathrate](https://user-images.githubusercontent.com/58402986/101437096-52460c80-38c4-11eb-8bc8-129116adf3e9.jpg)
-**Figure 10: Bottom 3 Counties with the Lowest Death Rate**
+**Figure 11: Bottom 3 Counties with the Lowest Death Rate**
 
 An interesting point is that Aleutians West Census Area has a very low poverty percentage, which is also correlated with the high median income which we do see. Our data analysis implied that it is likely for the county to have a low incidence rate if the citizens have the resources to keep themselves healthy. However, the same could go for the other end of the spectrum: having the resources to be unhealthy, which could explain why counties with high incidence rates also have a high median income.
 
