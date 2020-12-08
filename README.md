@@ -1,4 +1,4 @@
-![Cancer Graphic](https://user-images.githubusercontent.com/58491399/101261025-d93e8d80-36e8-11eb-9fce-ff649b77174c.jpeg)
+![YouTube Thumbnail 1280x720 px](https://user-images.githubusercontent.com/58491399/101435964-1f9b1480-38c2-11eb-875c-edb9717fbac3.jpeg)
 
 ## Index
 **1.** [Abstract](https://github.com/shernatasha/projects/blob/master/README.md#abstract) \
