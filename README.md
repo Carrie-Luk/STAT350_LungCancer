@@ -156,7 +156,6 @@ From these visualizations we can see that our death model has some high correlat
 
 <p align="center">
   <img width="585" alt="vifdeathmodel" src="https://user-images.githubusercontent.com/58402986/101544241-2f663780-395a-11eb-829d-709fb8a9b59f.PNG">
-  > Click on the image to expand the picture
 </p>
 
 **Figure 6: VIFs for Our Death Model**
