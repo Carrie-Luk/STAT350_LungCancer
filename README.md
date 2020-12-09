@@ -183,7 +183,7 @@ If we had studied delivery times for mail or housing prices vs size we would exp
 
 Death Model Summary       |  Incidence Model Summary
 :-------------------------:|:-------------------------:
-![deathmodelsummary2](https://user-images.githubusercontent.com/58402986/101565597-37d26880-3982-11eb-9295-a263e2ec4c6e.png) | ![incidencemodel](https://user-images.githubusercontent.com/58402986/101450106-d4dbc580-38de-11eb-9d5e-f471f8d20b21.png)
+![130282593_140023574272248_2417070448305198496_n](https://user-images.githubusercontent.com/58402986/101565458-f17d0980-3981-11eb-8670-786f6d656775.png) | ![incidencemodel](https://user-images.githubusercontent.com/58402986/101450106-d4dbc580-38de-11eb-9d5e-f471f8d20b21.png)
 > Click on the image to expand the picture 
 
 **Figure 8: Death and Incidence Model Summary**
@@ -221,7 +221,7 @@ What differentiates the highest three counties and the lowest three counties? Po
 
 Another observation we drew from this is that there is a lot of variety in our data. For example, we expect the counties with the highest death rate to also have a generally large population. However we see that Woodson County, with the highest death rate also has a low population of 3115. While Madison County and Powell County have a much larger population. The death rate for these three counties are also very similar, but there is a huge difference in median income and population between Madison Country and Powell County. One more observation we have made from these four groups of counties is that the PctEmployed16_Over is fairly high for all of them. There doesn’t appear to be a visible pattern here at least, which further supports why this variable was not included in the death model. This applies to the rest of our data as well and could also further explain the reason why our adjusted R<sup>2</sup> is a low number.
 
-We have concluded that people with higher education, higher income, and are with private health insurance companies are most likely in the group with a lower incidence or death rate. Therefore on implementation for the counties with high death or incidence rate would be to encourage education by making it more accessible or cheaper. This way citizens can have a higher chance of being employed and going with a private health coverage. 
+We have concluded that people with higher education, higher income, and private health insurance are most likely to have lower incidence and/or death rates. We  made our conclusion based on our multiple regression analysis of our lung cancer data set. It is interesting to note that we can see that there are many demographic factors which have an impact not only on cancer deaths but also cancer cases. Thus we can learn that besides taking care of our health, not being exposed to any forms of radiation and staying away from smoking are not the only factors which can help decrease the risk of developing any form of cancer. Though our model is specific to lung cancer we can make the assumption that all forms of cancer have some demographic factors which relate to it. Therefore we need to better understand which factors relate to the majority of cancers to be able to make more general conclusions. 
 
 
 ## Appendix 
