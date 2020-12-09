@@ -183,7 +183,7 @@ If we had studied delivery times for mail or housing prices vs size we would exp
 
 Death Model Summary       |  Incidence Model Summary
 :-------------------------:|:-------------------------:
-![130282593_140023574272248_2417070448305198496_n](https://user-images.githubusercontent.com/58402986/101565458-f17d0980-3981-11eb-8670-786f6d656775.png) | ![incidencemodel](https://user-images.githubusercontent.com/58402986/101450106-d4dbc580-38de-11eb-9d5e-f471f8d20b21.png)
+![deathmodelsummary2](https://user-images.githubusercontent.com/58402986/101565597-37d26880-3982-11eb-9295-a263e2ec4c6e.png) | ![incidencemodel](https://user-images.githubusercontent.com/58402986/101450106-d4dbc580-38de-11eb-9d5e-f471f8d20b21.png)
 > Click on the image to expand the picture 
 
 **Figure 8: Death and Incidence Model Summary**
