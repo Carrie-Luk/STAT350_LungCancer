@@ -141,7 +141,7 @@ Death Model            |  Incidence Model
 
 **Figure 4: Models Produced From Variable Selection**
 
-We can see with these newly fitted models that before performing any hypothesis tests and looking for significant predictors there are already some differences in predictors for both of our models. Though we see many similarities between the two our incidence model seems to focus more on race than the death model. We will take a closer look at the predictors once we reassess the residual analysis for both models. Once we replotted our residual plots for both the new death and incidence model we saw that there were no significant changes in the plots and found that removing some predictors still kept our normality and linear regression assumptions the same. Therefore we moved on to checking for any multicollinearity in these new models.
+We can see with these newly fitted models that before performing any hypothesis tests and looking for significant predictors there are already some differences in predictors for both of our models. Though we see many similarities between the two our incidence model seems to focus more on race than the death model. Once we replotted our residual plots for both the new death and incidence model we saw that there were no significant changes in the plots and found that removing some predictors still kept our normality and linear regression assumptions the same. Therefore we moved on to checking for any multicollinearity in these new models.
 
 We decided to use a correlation matrix to first visualize any presence of multicollinearity before computing our variance inflation factors. 
 
