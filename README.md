@@ -152,7 +152,7 @@ Death Model            |  Incidence Model
 
 **Figure 5: Correlation Matrices for Both Models**
 
-From these visualizations we can see that our death model has some high correlation coefficients which should be investigated whereas we do not see anything too alarming in our incidence model. We took a look at the variance inflation factors of our death model to further investigate these high coefficient values. 
+From these visualizations we can see that our death model has some high correlation coefficients which should be investigated whereas we do not see anything alarming in our incidence model. We checked our VIFs for the incidence model to ensure we had not missed anything and indeed we had low VIF values for all our predictors. We then took a look at the variance inflation factors of our death model to further investigate the high coefficient values. 
 
 <p align="center">
   <img width="585" alt="vifdeathmodel" src="https://user-images.githubusercontent.com/58402986/101544241-2f663780-395a-11eb-829d-709fb8a9b59f.PNG">
